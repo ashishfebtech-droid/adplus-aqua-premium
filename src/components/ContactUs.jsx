@@ -29,28 +29,28 @@ function ContactUs() {
       icon: <FaPhone />,
       title: "Phone Numbers",
       details: ["+91 9458381868", "+91 9286101180", "+91 7895128076"],
-      color: "from-cyan-500 to-blue-500",
+      color: "from-cyan-400 to-blue-500",
       action: "tel:+919458381868"
     },
     {
       icon: <FaWhatsapp />,
       title: "WhatsApp",
       details: ["+91 9458381868"],
-      color: "from-green-500 to-emerald-500",
+      color: "from-blue-400 to-cyan-500",
       action: "https://wa.me/919458381868"
     },
     {
       icon: <FaEnvelope />,
       title: "Email",
       details: ["adplus.aqua@gmail.com"],
-      color: "from-purple-500 to-pink-500",
+      color: "from-cyan-500 to-blue-600",
       action: "mailto:adplus.aqua@gmail.com"
     },
     {
       icon: <FaMapMarkerAlt />,
       title: "Address",
       details: ["Star Enterprises Roorkee, Haridwar, Uttarakhand, India"],
-      color: "from-orange-500 to-red-500",
+      color: "from-blue-500 to-cyan-600",
       action: "https://maps.google.com/?q=Roorkee,Haridwar,Uttarakhand"
     }
   ];
@@ -61,12 +61,12 @@ function ContactUs() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">
+    <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 via-blue-100 to-cyan-100 relative overflow-hidden">
       
-      {/* Background Effects */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+      {/* Background Effects - Light Version */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-300 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
       </div>
 
       <div className="relative z-10">
@@ -74,10 +74,10 @@ function ContactUs() {
           
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
               Get In Touch
             </h2>
-            <p className="text-xl text-cyan-200 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-700 max-w-3xl mx-auto">
               Ready to start your custom water bottle order? Contact us today for a free quote!
             </p>
           </div>
@@ -86,16 +86,16 @@ function ContactUs() {
             
             {/* Contact Form */}
             <div>
-              <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                  <FaPaperPlane className="text-cyan-400" />
+              <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 border border-blue-200 shadow-lg">
+                <h3 className="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-3">
+                  <FaPaperPlane className="text-cyan-600" />
                   Send Us a Message
                 </h3>
                 
                 <form onSubmit={handleSubmit} className="space-y-5">
                   {/* Name */}
                   <div>
-                    <label className="block text-cyan-200 font-semibold mb-2 flex items-center gap-2">
+                    <label className="block text-blue-800 font-semibold mb-2 flex items-center gap-2">
                       <FaUser className="text-sm" />
                       Your Name *
                     </label>
@@ -105,14 +105,14 @@ function ContactUs() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 outline-none transition-all backdrop-blur-sm"
+                      className="w-full bg-white border border-blue-300 rounded-lg px-4 py-3 text-blue-900 placeholder-blue-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/50 outline-none transition-all"
                       placeholder="Enter your full name"
                     />
                   </div>
 
                   {/* Email */}
                   <div>
-                    <label className="block text-cyan-200 font-semibold mb-2 flex items-center gap-2">
+                    <label className="block text-blue-800 font-semibold mb-2 flex items-center gap-2">
                       <FaEnvelope className="text-sm" />
                       Email Address *
                     </label>
@@ -122,14 +122,14 @@ function ContactUs() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 outline-none transition-all backdrop-blur-sm"
+                      className="w-full bg-white border border-blue-300 rounded-lg px-4 py-3 text-blue-900 placeholder-blue-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/50 outline-none transition-all"
                       placeholder="your.email@example.com"
                     />
                   </div>
 
                   {/* Phone */}
                   <div>
-                    <label className="block text-cyan-200 font-semibold mb-2 flex items-center gap-2">
+                    <label className="block text-blue-800 font-semibold mb-2 flex items-center gap-2">
                       <FaPhone className="text-sm" />
                       Phone Number *
                     </label>
@@ -139,14 +139,14 @@ function ContactUs() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 outline-none transition-all backdrop-blur-sm"
+                      className="w-full bg-white border border-blue-300 rounded-lg px-4 py-3 text-blue-900 placeholder-blue-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/50 outline-none transition-all"
                       placeholder="+91 XXXXX XXXXX"
                     />
                   </div>
 
                   {/* Company */}
                   <div>
-                    <label className="block text-cyan-200 font-semibold mb-2 flex items-center gap-2">
+                    <label className="block text-blue-800 font-semibold mb-2 flex items-center gap-2">
                       <FaBuilding className="text-sm" />
                       Company/Event Name
                     </label>
@@ -155,14 +155,14 @@ function ContactUs() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 outline-none transition-all backdrop-blur-sm"
+                      className="w-full bg-white border border-blue-300 rounded-lg px-4 py-3 text-blue-900 placeholder-blue-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/50 outline-none transition-all"
                       placeholder="Your business or event name"
                     />
                   </div>
 
                   {/* Message */}
                   <div>
-                    <label className="block text-cyan-200 font-semibold mb-2">
+                    <label className="block text-blue-800 font-semibold mb-2">
                       Your Message *
                     </label>
                     <textarea
@@ -171,7 +171,7 @@ function ContactUs() {
                       onChange={handleChange}
                       required
                       rows="4"
-                      className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 outline-none transition-all backdrop-blur-sm resize-none"
+                      className="w-full bg-white border border-blue-300 rounded-lg px-4 py-3 text-blue-900 placeholder-blue-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/50 outline-none transition-all resize-none"
                       placeholder="Tell us about your requirements: bottle size, quantity, design preferences, delivery timeline, etc."
                     ></textarea>
                   </div>
@@ -179,13 +179,13 @@ function ContactUs() {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition duration-300 flex items-center justify-center gap-2 shadow-xl hover:shadow-2xl transform hover:scale-105"
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     <FaWhatsapp className="text-xl" />
                     Send via WhatsApp
                   </button>
 
-                  <p className="text-gray-400 text-xs text-center">
+                  <p className="text-blue-600 text-xs text-center">
                     * Your message will open in WhatsApp for quick response
                   </p>
                 </form>
@@ -202,16 +202,16 @@ function ContactUs() {
                   href={info.action}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 shadow-xl"
+                  className="block bg-white/80 backdrop-blur-md rounded-2xl p-6 border border-blue-200 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   <div className="flex items-start gap-4">
-                    <div className={`bg-gradient-to-r ${info.color} w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 text-white text-xl`}>
+                    <div className={`bg-gradient-to-r ${info.color} w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 text-white text-xl shadow-md`}>
                       {info.icon}
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-xl font-bold text-white mb-2">{info.title}</h4>
+                      <h4 className="text-xl font-bold text-blue-900 mb-2">{info.title}</h4>
                       {info.details.map((detail, idx) => (
-                        <p key={idx} className="text-cyan-200 font-semibold">
+                        <p key={idx} className="text-cyan-700 font-semibold">
                           {detail}
                         </p>
                       ))}
@@ -221,28 +221,28 @@ function ContactUs() {
               ))}
 
               {/* Business Hours */}
-              <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30">
-                <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                  <FaClock className="text-cyan-400" />
+              <div className="bg-gradient-to-r from-cyan-100 to-blue-100 backdrop-blur-lg rounded-2xl p-6 border border-cyan-300 shadow-lg">
+                <h4 className="text-xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+                  <FaClock className="text-cyan-600" />
                   Business Hours
                 </h4>
                 {businessHours.map((hour, index) => (
-                  <div key={index} className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-gray-300">{hour.day}</span>
-                    <span className="text-cyan-200 font-semibold">{hour.time}</span>
+                  <div key={index} className="flex justify-between items-center py-2 border-b border-blue-200 last:border-0">
+                    <span className="text-blue-700">{hour.day}</span>
+                    <span className="text-cyan-700 font-semibold">{hour.time}</span>
                   </div>
                 ))}
               </div>
 
               {/* Social Media */}
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-                <h4 className="text-xl font-bold text-white mb-4 text-center">Follow Us</h4>
+              <div className="bg-white/80 backdrop-blur-md rounded-2xl p-6 border border-blue-200 shadow-lg">
+                <h4 className="text-xl font-bold text-blue-900 mb-4 text-center">Follow Us</h4>
                 <div className="flex justify-center gap-4">
                   <a
                     href="https://www.instagram.com/adplus.aqua?igsh=cGUwYzNsNTd0NWJx&utm_source=qr"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-pink-500 to-rose-500 w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform duration-300 shadow-lg"
+                    className="bg-gradient-to-r from-cyan-400 to-blue-500 w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform duration-300 shadow-md hover:shadow-lg"
                   >
                     <FaInstagram />
                   </a>
@@ -250,7 +250,7 @@ function ContactUs() {
                     href="https://wa.me/919458381868"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-green-500 to-emerald-500 w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform duration-300 shadow-lg"
+                    className="bg-gradient-to-r from-blue-400 to-cyan-500 w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform duration-300 shadow-md hover:shadow-lg"
                   >
                     <FaWhatsapp />
                   </a>
@@ -258,10 +258,10 @@ function ContactUs() {
               </div>
 
               {/* FSSAI License */}
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 text-center">
-                <p className="text-gray-300 text-sm mb-1">FSSAI License No.</p>
-                <p className="text-cyan-200 font-bold text-lg">12625006000401</p>
-                <p className="text-gray-400 text-xs mt-2">Star Enterprises</p>
+              <div className="bg-white/80 backdrop-blur-md rounded-2xl p-4 border border-blue-200 text-center shadow-lg">
+                <p className="text-blue-600 text-sm mb-1">FSSAI License No.</p>
+                <p className="text-cyan-700 font-bold text-lg">12625006000401</p>
+                <p className="text-blue-500 text-xs mt-2">Star Enterprises</p>
               </div>
 
             </div>

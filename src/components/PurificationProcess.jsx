@@ -10,7 +10,7 @@ function PurificationProcess() {
       icon: <FaFilter />,
       title: "Pre-Filtration",
       description: "Removes large particles, sediments, and visible impurities from raw water",
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-400 to-cyan-500",
       detail: "Multi-media filter removes suspended solids"
     },
     {
@@ -18,7 +18,7 @@ function PurificationProcess() {
       icon: <FaFlask />,
       title: "Activated Carbon",
       description: "Eliminates chlorine, odor, color, and organic compounds",
-      color: "from-cyan-500 to-teal-500",
+      color: "from-cyan-400 to-blue-500",
       detail: "Improves taste and removes chemical impurities"
     },
     {
@@ -26,7 +26,7 @@ function PurificationProcess() {
       icon: <FaFilter />,
       title: "Micro Filtration",
       description: "Removes bacteria, cysts, and microscopic particles",
-      color: "from-teal-500 to-green-500",
+      color: "from-blue-500 to-cyan-600",
       detail: "0.1 micron filter ensures crystal clear water"
     },
     {
@@ -34,7 +34,7 @@ function PurificationProcess() {
       icon: <FaFlask />,
       title: "Reverse Osmosis",
       description: "Core purification removes dissolved salts, heavy metals, and TDS",
-      color: "from-green-500 to-emerald-500",
+      color: "from-cyan-500 to-blue-600",
       detail: "Semi-permeable membrane technology"
     },
     {
@@ -42,7 +42,7 @@ function PurificationProcess() {
       icon: <FaShieldAlt />,
       title: "UV Treatment",
       description: "Kills 99.9% of harmful microorganisms and bacteria",
-      color: "from-purple-500 to-indigo-500",
+      color: "from-blue-600 to-cyan-700",
       detail: "Ultraviolet disinfection without chemicals"
     },
     {
@@ -50,7 +50,7 @@ function PurificationProcess() {
       icon: <FaFlask />,
       title: "Mineralizer",
       description: "Adds essential minerals for health and taste enhancement",
-      color: "from-indigo-500 to-purple-500",
+      color: "from-cyan-600 to-blue-700",
       detail: "Calcium, Magnesium, and other vital minerals"
     },
     {
@@ -58,7 +58,7 @@ function PurificationProcess() {
       icon: <FaCheckCircle />,
       title: "Ozonation",
       description: "Final disinfection and oxygen enrichment for freshness",
-      color: "from-pink-500 to-rose-500",
+      color: "from-blue-700 to-cyan-800",
       detail: "Keeps water fresh in sealed bottles"
     }
   ];
@@ -68,23 +68,23 @@ function PurificationProcess() {
       icon: <FaCertificate />,
       name: "FSSAI Certified",
       license: "Lic. No. 12625006000401",
-      color: "from-green-500 to-emerald-500"
+      color: "from-cyan-500 to-blue-600"
     },
     {
       icon: <FaAward />,
       name: "ISO Certified",
       license: "Quality Management System",
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-600"
     }
   ];
 
   return (
-    <section id="purification" className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">
+    <section id="purification" className="py-20 bg-gradient-to-br from-blue-50 via-blue-100 to-cyan-100 relative overflow-hidden">
       
-      {/* Background Effects */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-20 w-80 h-80 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-        <div className="absolute bottom-10 right-20 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+      {/* Background Effects - Light Version */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-10 left-20 w-80 h-80 bg-cyan-300 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+        <div className="absolute bottom-10 right-20 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
       </div>
 
       <div className="relative z-10">
@@ -92,17 +92,17 @@ function PurificationProcess() {
           
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
               7-Stage Purification Process
             </h2>
-            <p className="text-xl text-cyan-200 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-blue-700 max-w-3xl mx-auto mb-8">
               Your trust deserves purity — every drop of Adplus.aqua passes through 7 advanced stages of purification before it's bottled
             </p>
             
             {/* Quality Badge */}
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-md px-6 py-3 rounded-full border border-green-400/30">
-              <FaShieldAlt className="text-green-400 text-xl" />
-              <span className="text-white font-semibold">99.9% Pure & Safe</span>
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-100 to-blue-100 backdrop-blur-md px-6 py-3 rounded-full border border-cyan-400 shadow-sm">
+              <FaShieldAlt className="text-cyan-600 text-xl" />
+              <span className="text-blue-800 font-semibold">99.9% Pure & Safe</span>
             </div>
           </div>
 
@@ -112,37 +112,37 @@ function PurificationProcess() {
               <div 
                 key={index}
                 onMouseEnter={() => setActiveStage(index)}
-                className={`bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 transition-all duration-300 cursor-pointer ${
+                className={`bg-white/80 backdrop-blur-md rounded-2xl p-6 border-2 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl ${
                   activeStage === index 
-                    ? 'border-cyan-400 shadow-2xl shadow-cyan-500/25 transform scale-105' 
-                    : 'border-white/20 hover:border-cyan-400/50'
+                    ? 'border-cyan-400 shadow-cyan-500/25 transform scale-105' 
+                    : 'border-blue-200 hover:border-cyan-400'
                 }`}
               >
                 {/* Stage Number */}
-                <div className={`inline-flex bg-gradient-to-r ${stage.color} w-12 h-12 rounded-full items-center justify-center font-bold text-white text-lg mb-4`}>
+                <div className={`inline-flex bg-gradient-to-r ${stage.color} w-12 h-12 rounded-full items-center justify-center font-bold text-white text-lg mb-4 shadow-md`}>
                   {stage.stage}
                 </div>
 
                 {/* Icon */}
-                <div className={`bg-gradient-to-r ${stage.color} w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white text-2xl`}>
+                <div className={`bg-gradient-to-r ${stage.color} w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white text-2xl shadow-md`}>
                   {stage.icon}
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-white mb-3 text-center">{stage.title}</h3>
-                <p className="text-gray-300 text-sm mb-3 text-center leading-relaxed">{stage.description}</p>
+                <h3 className="text-xl font-bold text-blue-900 mb-3 text-center">{stage.title}</h3>
+                <p className="text-blue-700 text-sm mb-3 text-center leading-relaxed">{stage.description}</p>
                 
                 {/* Detail Badge */}
-                <div className="bg-white/10 rounded-lg p-2 text-center">
-                  <p className="text-cyan-200 text-xs font-semibold">{stage.detail}</p>
+                <div className="bg-cyan-50 rounded-lg p-2 text-center border border-cyan-200">
+                  <p className="text-cyan-700 text-xs font-semibold">{stage.detail}</p>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Flow Diagram - Visual Representation */}
-          <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-8 border border-cyan-400/30 shadow-2xl mb-16">
-            <h3 className="text-3xl font-bold text-white text-center mb-8">
+          <div className="bg-gradient-to-r from-cyan-100 to-blue-100 rounded-3xl p-8 border border-cyan-300 shadow-lg mb-16">
+            <h3 className="text-3xl font-bold text-blue-900 text-center mb-8">
               Purification Flow
             </h3>
             
@@ -150,13 +150,13 @@ function PurificationProcess() {
               {purificationStages.map((stage, index) => (
                 <React.Fragment key={index}>
                   <div className="flex flex-col items-center">
-                    <div className={`bg-gradient-to-r ${stage.color} w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg`}>
+                    <div className={`bg-gradient-to-r ${stage.color} w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-md`}>
                       {stage.stage}
                     </div>
-                    <span className="text-white text-xs mt-2 max-w-[80px] text-center">{stage.title}</span>
+                    <span className="text-blue-800 text-xs mt-2 max-w-[80px] text-center font-medium">{stage.title}</span>
                   </div>
                   {index < purificationStages.length - 1 && (
-                    <div className="text-cyan-400 text-2xl hidden sm:block">→</div>
+                    <div className="text-cyan-500 text-2xl hidden sm:block">→</div>
                   )}
                 </React.Fragment>
               ))}
@@ -168,54 +168,54 @@ function PurificationProcess() {
             {certifications.map((cert, index) => (
               <div 
                 key={index}
-                className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 shadow-xl"
+                className="bg-white/80 backdrop-blur-md rounded-3xl p-8 border border-blue-200 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
-                <div className={`bg-gradient-to-r ${cert.color} w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white text-3xl`}>
+                <div className={`bg-gradient-to-r ${cert.color} w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white text-3xl shadow-md`}>
                   {cert.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-white text-center mb-2">{cert.name}</h3>
-                <p className="text-cyan-200 text-center font-semibold">{cert.license}</p>
+                <h3 className="text-2xl font-bold text-blue-900 text-center mb-2">{cert.name}</h3>
+                <p className="text-cyan-700 text-center font-semibold">{cert.license}</p>
               </div>
             ))}
           </div>
 
           {/* Quality Assurance Points */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-2xl">
-            <h3 className="text-2xl font-bold text-white text-center mb-8">
+          <div className="bg-white/80 backdrop-blur-lg rounded-2xl p-8 border border-blue-200 shadow-lg">
+            <h3 className="text-2xl font-bold text-blue-900 text-center mb-8">
               Our Quality Commitment
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="bg-gradient-to-r from-green-500 to-emerald-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="bg-gradient-to-r from-cyan-400 to-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
                   <FaCheckCircle className="text-white text-2xl" />
                 </div>
-                <h4 className="text-white font-semibold mb-2">Lab Tested</h4>
-                <p className="text-gray-300 text-sm">Every batch tested for purity</p>
+                <h4 className="text-blue-900 font-semibold mb-2">Lab Tested</h4>
+                <p className="text-blue-700 text-sm">Every batch tested for purity</p>
               </div>
 
               <div className="text-center">
-                <div className="bg-gradient-to-r from-blue-500 to-cyan-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="bg-gradient-to-r from-blue-400 to-cyan-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
                   <FaShieldAlt className="text-white text-2xl" />
                 </div>
-                <h4 className="text-white font-semibold mb-2">Food Grade</h4>
-                <p className="text-gray-300 text-sm">BPA-free premium bottles</p>
+                <h4 className="text-blue-900 font-semibold mb-2">Food Grade</h4>
+                <p className="text-blue-700 text-sm">BPA-free premium bottles</p>
               </div>
 
               <div className="text-center">
-                <div className="bg-gradient-to-r from-purple-500 to-indigo-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="bg-gradient-to-r from-cyan-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
                   <FaAward className="text-white text-2xl" />
                 </div>
-                <h4 className="text-white font-semibold mb-2">Certified</h4>
-                <p className="text-gray-300 text-sm">FSSAI & ISO standards</p>
+                <h4 className="text-blue-900 font-semibold mb-2">Certified</h4>
+                <p className="text-blue-700 text-sm">FSSAI & ISO standards</p>
               </div>
 
               <div className="text-center">
-                <div className="bg-gradient-to-r from-pink-500 to-rose-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="bg-gradient-to-r from-blue-500 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
                   <FaFlask className="text-white text-2xl" />
                 </div>
-                <h4 className="text-white font-semibold mb-2">Fresh</h4>
-                <p className="text-gray-300 text-sm">Ozonation keeps it fresh</p>
+                <h4 className="text-blue-900 font-semibold mb-2">Fresh</h4>
+                <p className="text-blue-700 text-sm">Ozonation keeps it fresh</p>
               </div>
             </div>
           </div>
