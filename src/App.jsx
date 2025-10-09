@@ -1,0 +1,32 @@
+
+
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import WhoWeAre from "./components/WhoWeAre";
+import Portfolio from "./components/Portfolio";
+import HowWeWork from "./components/HowWeWork";
+import ProductDetails from "./components/ProductDetails";
+import FoundersMessage from "./components/FoundersMessage";
+import PurificationProcess from "./components/PurificationProcess"; 
+import ContactUs from "./components/ContactUs";
+import Footer from "./components/Footer"; 
+
+function App() {
+  return (
+    <div>
+      <Header />
+      <Hero />
+      <WhoWeAre />
+      <ProductDetails />
+      <HowWeWork />
+      <Portfolio />
+      <FoundersMessage />
+      <PurificationProcess />
+      <ContactUs />
+      <Footer />
+
+    </div>
+  );
+}
+
+export default App;
