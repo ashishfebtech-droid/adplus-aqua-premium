@@ -41,8 +41,8 @@ function Header() {
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-slate-900/95 backdrop-blur-md shadow-2xl shadow-cyan-500/10 py-3' 
-            : 'bg-slate-900/70 backdrop-blur-sm py-5'
+            ? 'bg-blue-800/95 backdrop-blur-md shadow-2xl shadow-cyan-500/10 py-3' 
+            : 'bg-blue-800/80 backdrop-blur-sm py-5'
         } ${showHeader ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
@@ -51,9 +51,9 @@ function Header() {
             <div className="text-3xl transition-transform duration-300 group-hover:scale-110">💧</div>
             <div className="text-white">
               <h1 className="text-xl sm:text-2xl font-bold tracking-wide">
-                Adplus<span className="text-cyan-400">.aqua</span>
+                Adplus<span className="text-cyan-300">.aqua</span>
               </h1>
-              <p className="text-xs text-cyan-200 hidden sm:block">Custom Branded Water</p>
+              <p className="text-xs text-cyan-100 hidden sm:block">Custom Branded Water</p>
             </div>
           </a>
 
@@ -66,10 +66,10 @@ function Header() {
                 className="group relative px-3 xl:px-4 py-2 text-white font-medium rounded-lg hover:bg-cyan-500/20 transition-all duration-300 hover:scale-105"
               >
                 <span className="flex items-center gap-2">
-                  <span className="text-sm text-cyan-400">{item.icon}</span>
+                  <span className="text-sm text-cyan-300">{item.icon}</span>
                   <span className="text-sm">{item.name}</span>
                 </span>
-                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-cyan-400 transition-all duration-300 transform -translate-x-1/2 group-hover:w-3/4"></span>
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-cyan-300 transition-all duration-300 transform -translate-x-1/2 group-hover:w-3/4"></span>
               </a>
             ))}
           </nav>
@@ -89,7 +89,7 @@ function Header() {
                 href="https://www.instagram.com/adplus.aqua?igsh=cGUwYzNsNTd0NWJx&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-pink-400 hover:scale-110 transition-all duration-300"
+                className="hover:text-cyan-300 hover:scale-110 transition-all duration-300"
                 aria-label="Instagram"
               >
                 <FaInstagram />
@@ -98,7 +98,7 @@ function Header() {
                 href="https://wa.me/919458381868"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-green-400 hover:scale-110 transition-all duration-300"
+                className="hover:text-cyan-300 hover:scale-110 transition-all duration-300"
                 aria-label="WhatsApp"
               >
                 <FaWhatsapp />
@@ -127,7 +127,7 @@ function Header() {
 
       {/* Mobile Sidebar */}
       <aside
-        className={`fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-gradient-to-b from-slate-900 via-blue-900 to-purple-900 z-50 transform transition-transform duration-300 flex flex-col shadow-2xl lg:hidden ${
+        className={`fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-gradient-to-b from-blue-800 via-blue-700 to-cyan-800 z-50 transform transition-transform duration-300 flex flex-col shadow-2xl lg:hidden ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -139,7 +139,7 @@ function Header() {
               <h2 className="text-xl font-bold">
                 Adplus<span className="text-cyan-300">.aqua</span>
               </h2>
-              <p className="text-xs text-cyan-200">Custom Branded Water</p>
+              <p className="text-xs text-cyan-100">Custom Branded Water</p>
             </div>
           </div>
           <button 
@@ -160,7 +160,7 @@ function Header() {
               onClick={closeMobileMenu}
               className="flex items-center gap-4 p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-cyan-500/20 hover:border-cyan-400/50 hover:translate-x-1 transition-all duration-200 text-white font-medium"
             >
-              <span className="text-xl text-cyan-400">{item.icon}</span>
+              <span className="text-xl text-cyan-300">{item.icon}</span>
               <span>{item.name}</span>
             </a>
           ))}
@@ -176,7 +176,7 @@ function Header() {
             Get Free Quote
           </a>
           
-          <p className="text-cyan-200 text-sm mb-3 text-center font-medium">
+          <p className="text-cyan-100 text-sm mb-3 text-center font-medium">
             💧 Purity with Personalization
           </p>
           
@@ -185,7 +185,7 @@ function Header() {
               href="https://www.instagram.com/adplus.aqua?igsh=cGUwYzNsNTd0NWJx&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-pink-400 hover:scale-125 transition-all duration-300"
+              className="hover:text-cyan-300 hover:scale-125 transition-all duration-300"
               aria-label="Instagram"
             >
               <FaInstagram />
@@ -194,7 +194,7 @@ function Header() {
               href="https://wa.me/919458381868"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-green-400 hover:scale-125 transition-all duration-300"
+              className="hover:text-cyan-300 hover:scale-125 transition-all duration-300"
               aria-label="WhatsApp"
             >
               <FaWhatsapp />
@@ -203,8 +203,8 @@ function Header() {
 
           {/* Contact Info */}
           <div className="mt-4 text-center">
-            <p className="text-cyan-200 text-xs">📞 +91 9458381868</p>
-            <p className="text-cyan-200 text-xs">📧 adplus.aqua@gmail.com</p>
+            <p className="text-cyan-100 text-xs">📞 +91 9458381868</p>
+            <p className="text-cyan-100 text-xs">📧 adplus.aqua@gmail.com</p>
           </div>
         </div>
       </aside>

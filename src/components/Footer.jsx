@@ -52,25 +52,25 @@ function Footer() {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-blue-800 via-blue-700 to-cyan-800 text-white overflow-hidden">
 
-      {/* Background Effects */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
+      {/* Background Effects - Darker Blue for Footer */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-600 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-600 rounded-full blur-3xl"></div>
       </div>
 
       {/* Main Footer Content */}
       <div className="relative z-10">
 
         {/* CTA Section */}
-        <div className="border-b border-white/10">
+        <div className="border-b border-blue-500/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="text-center">
               <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-white">
                 Ready to Brand Your Water?
               </h3>
-              <p className="text-cyan-200 text-lg mb-6 max-w-2xl mx-auto">
+              <p className="text-cyan-100 text-lg mb-6 max-w-2xl mx-auto">
                 Get custom branded water bottles that speak your brand story. Minimum order 500 bottles.
               </p>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3 mx-auto">
@@ -93,24 +93,24 @@ function Footer() {
                   <div className="text-3xl transition-transform duration-300 group-hover:scale-110">💧</div>
                   <div className="text-white">
                     <h1 className="text-xl sm:text-2xl font-bold tracking-wide">
-                      Adplus<span className="text-cyan-400">.aqua</span>
+                      Adplus<span className="text-cyan-300">.aqua</span>
                     </h1>
-                    <p className="text-xs text-cyan-200 hidden sm:block">Custom Branded Water</p>
+                    <p className="text-xs text-cyan-100 hidden sm:block">Custom Branded Water</p>
                   </div>
                 </a>
-                <p className="text-cyan-200 leading-relaxed">
+                <p className="text-cyan-100 leading-relaxed mt-3">
                   We create customized, high quality packaged drinking water bottles that carry your brand message wherever they go.
                 </p>
               </div>
 
               {/* Certifications */}
               <div className="space-y-3">
-                <div className="flex items-center gap-3 text-cyan-200">
-                  <FaShieldAlt className="text-cyan-400" />
+                <div className="flex items-center gap-3 text-cyan-100">
+                  <FaShieldAlt className="text-cyan-300" />
                   <span className="text-sm">FSSAI Certified</span>
                 </div>
-                <div className="flex items-center gap-3 text-cyan-200">
-                  <FaAward className="text-cyan-400" />
+                <div className="flex items-center gap-3 text-cyan-100">
+                  <FaAward className="text-cyan-300" />
                   <span className="text-sm">ISO Certified</span>
                 </div>
               </div>
@@ -124,9 +124,9 @@ function Footer() {
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-cyan-200 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
+                      className="text-cyan-100 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
                     >
-                      <FaArrowRight className="text-cyan-400 text-xs group-hover:translate-x-1 transition-transform duration-300" />
+                      <FaArrowRight className="text-cyan-300 text-xs group-hover:translate-x-1 transition-transform duration-300" />
                       {link.name}
                     </a>
                   </li>
@@ -142,9 +142,9 @@ function Footer() {
                   <li key={index}>
                     <a
                       href={service.href}
-                      className="text-cyan-200 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
+                      className="text-cyan-100 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
                     >
-                      <FaArrowRight className="text-cyan-400 text-xs group-hover:translate-x-1 transition-transform duration-300" />
+                      <FaArrowRight className="text-cyan-300 text-xs group-hover:translate-x-1 transition-transform duration-300" />
                       {service.name}
                     </a>
                   </li>
@@ -158,12 +158,12 @@ function Footer() {
               <div className="space-y-4">
                 {contactInfo.map((contact, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <div className="text-cyan-400">
+                    <div className="text-cyan-300">
                       {contact.icon}
                     </div>
                     <div>
                       <div className="font-semibold text-white text-sm">{contact.info}</div>
-                      <div className="text-cyan-200 text-xs">{contact.description}</div>
+                      <div className="text-cyan-100 text-xs">{contact.description}</div>
                     </div>
                   </div>
                 ))}
@@ -175,10 +175,17 @@ function Footer() {
                 <div className="flex gap-3">
                   <a
                     href="https://www.instagram.com/adplus.aqua"
-                    className="bg-white/10 hover:bg-cyan-600 border border-white/20 w-10 h-10 rounded-xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300"
+                    className="bg-blue-600/50 hover:bg-cyan-600 border border-blue-400/30 w-10 h-10 rounded-xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300"
                     aria-label="Instagram"
                   >
                     <FaInstagram />
+                  </a>
+                  <a
+                    href="https://wa.me/919458381868"
+                    className="bg-blue-600/50 hover:bg-green-500 border border-blue-400/30 w-10 h-10 rounded-xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300"
+                    aria-label="WhatsApp"
+                  >
+                    <FaWhatsapp />
                   </a>
                 </div>
               </div>
@@ -188,21 +195,21 @@ function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10">
+        <div className="border-t border-blue-500/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
 
               {/* Copyright */}
-              <div className="text-cyan-200 text-sm text-center md:text-left">
+              <div className="text-cyan-100 text-sm text-center md:text-left">
                 © {currentYear} Adplus Aqua. All rights reserved. | FSSAI Lic. No. 12625006000491
               </div>
 
               {/* Additional Links */}
               <div className="flex flex-wrap items-center gap-6 text-sm">
-                <a href="#" className="text-cyan-200 hover:text-white transition-colors duration-300">
+                <a href="#" className="text-cyan-100 hover:text-white transition-colors duration-300">
                   Privacy Policy
                 </a>
-                <a href="#" className="text-cyan-200 hover:text-white transition-colors duration-300">
+                <a href="#" className="text-cyan-100 hover:text-white transition-colors duration-300">
                   Terms of Service
                 </a>
               </div>
@@ -219,7 +226,7 @@ function Footer() {
           href="https://wa.me/919458381868"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300"
+          className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300"
           aria-label="Chat on WhatsApp"
         >
           <FaWhatsapp className="text-2xl" />
