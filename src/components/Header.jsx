@@ -41,8 +41,8 @@ function Header() {
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-blue-800/95 backdrop-blur-md shadow-2xl shadow-cyan-500/10 py-3' 
-            : 'bg-blue-800/80 backdrop-blur-sm py-5'
+            ? 'bg-blue-800/95 backdrop-blur-md shadow-lg py-3' 
+            : 'bg-blue-800/90 backdrop-blur-sm py-5'
         } ${showHeader ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
@@ -53,7 +53,7 @@ function Header() {
               <h1 className="text-xl sm:text-2xl font-bold tracking-wide">
                 Adplus<span className="text-cyan-300">.aqua</span>
               </h1>
-              <p className="text-xs text-cyan-100 hidden sm:block">Custom Branded Water</p>
+              <p className="text-xs text-blue-100 hidden sm:block">Custom Branded Water</p>
             </div>
           </a>
 
@@ -139,7 +139,7 @@ function Header() {
               <h2 className="text-xl font-bold">
                 Adplus<span className="text-cyan-300">.aqua</span>
               </h2>
-              <p className="text-xs text-cyan-100">Custom Branded Water</p>
+              <p className="text-xs text-blue-100">Custom Branded Water</p>
             </div>
           </div>
           <button 
@@ -176,7 +176,7 @@ function Header() {
             Get Free Quote
           </a>
           
-          <p className="text-cyan-100 text-sm mb-3 text-center font-medium">
+          <p className="text-blue-100 text-sm mb-3 text-center font-medium">
             💧 Purity with Personalization
           </p>
           
@@ -203,8 +203,8 @@ function Header() {
 
           {/* Contact Info */}
           <div className="mt-4 text-center">
-            <p className="text-cyan-100 text-xs">📞 +91 9458381868</p>
-            <p className="text-cyan-100 text-xs">📧 adplus.aqua@gmail.com</p>
+            <p className="text-blue-100 text-xs">📞 +91 9458381868</p>
+            <p className="text-blue-100 text-xs">📧 adplus.aqua@gmail.com</p>
           </div>
         </div>
       </aside>

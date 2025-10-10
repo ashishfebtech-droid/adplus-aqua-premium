@@ -110,23 +110,19 @@ function Portfolio() {
   };
 
   return (
-    <section id="portfolio" className="py-20 bg-gradient-to-br from-blue-50 via-blue-100 to-cyan-100 relative overflow-hidden">
+    <section id="portfolio" className="py-20 bg-white relative overflow-hidden">
       
-      {/* Background Effects - Light Version */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 right-20 w-80 h-80 bg-cyan-300 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
-      </div>
+      {/* Background Effects - Removed */}
 
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
               Our Portfolio
             </h2>
-            <p className="text-xl text-blue-700 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Trusted by leading hotels, businesses, and thousands of happy clients across India
             </p>
           </div>
@@ -136,18 +132,18 @@ function Portfolio() {
             {clientCategories.map((category, index) => (
               <div 
                 key={index}
-                className="bg-white/80 backdrop-blur-md rounded-2xl p-6 border border-blue-200 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105 shadow-sm"
               >
                 <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 bg-gradient-to-r ${category.color} text-white text-2xl shadow-md`}>
                   {category.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-blue-900 text-center mb-2">
+                <h3 className="text-2xl font-bold text-gray-800 text-center mb-2">
                   {category.count}
                 </h3>
-                <h4 className="text-lg font-semibold text-blue-800 text-center mb-2">
+                <h4 className="text-lg font-semibold text-gray-700 text-center mb-2">
                   {category.title}
                 </h4>
-                <p className="text-blue-600 text-sm text-center">
+                <p className="text-gray-600 text-sm text-center">
                   {category.description}
                 </p>
               </div>
@@ -156,19 +152,19 @@ function Portfolio() {
 
           {/* Portfolio Gallery */}
           <div className="mb-16">
-            <h3 className="text-3xl font-bold text-blue-900 text-center mb-8">Our Work</h3>
+            <h3 className="text-3xl font-bold text-gray-800 text-center mb-8">Our Work</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {portfolioImages.map((item, index) => (
                 <div 
                   key={index}
-                  className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105"
                 >
                   <img 
                     src={item.url} 
                     alt={item.title}
                     className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                     <span className="text-cyan-300 text-xs font-semibold mb-1">{item.category}</span>
                     <h4 className="text-white font-bold text-lg">{item.title}</h4>
                   </div>
@@ -178,14 +174,14 @@ function Portfolio() {
           </div>
 
           {/* Testimonials Section */}
-          <div className="bg-gradient-to-r from-cyan-100 to-blue-100 rounded-3xl p-8 border border-cyan-300 shadow-lg">
-            <h3 className="text-3xl font-bold text-blue-900 text-center mb-8">
+          <div className="bg-gray-50 rounded-3xl p-8 border border-gray-200 shadow-sm mb-12">
+            <h3 className="text-3xl font-bold text-gray-800 text-center mb-8">
               What Our Clients Say
             </h3>
 
             {/* Testimonial Slider */}
             <div className="relative max-w-4xl mx-auto">
-              <div className="bg-white/80 backdrop-blur-md rounded-2xl p-8 border border-blue-200 shadow-md">
+              <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
                 
                 {/* Quote Icon */}
                 <div className="flex justify-center mb-6">
@@ -204,7 +200,7 @@ function Portfolio() {
                   </div>
 
                   {/* Text */}
-                  <p className="text-blue-800 text-lg leading-relaxed mb-6 italic">
+                  <p className="text-gray-700 text-lg leading-relaxed mb-6 italic">
                     "{testimonials[activeTestimonial].text}"
                   </p>
 
@@ -216,13 +212,13 @@ function Portfolio() {
                       className="w-16 h-16 rounded-full object-cover border-2 border-cyan-400 shadow-md"
                     />
                     <div className="text-left">
-                      <h4 className="text-blue-900 font-bold text-lg">
+                      <h4 className="text-gray-800 font-bold text-lg">
                         {testimonials[activeTestimonial].name}
                       </h4>
                       <p className="text-cyan-600 text-sm">
                         {testimonials[activeTestimonial].role}
                       </p>
-                      <p className="text-blue-600 text-xs">
+                      <p className="text-gray-600 text-xs">
                         {testimonials[activeTestimonial].company}
                       </p>
                     </div>
@@ -233,7 +229,7 @@ function Portfolio() {
                 <div className="flex justify-between items-center mt-8">
                   <button 
                     onClick={prevTestimonial}
-                    className="bg-blue-200 hover:bg-blue-300 text-blue-700 p-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"
+                    className="bg-gray-200 hover:bg-gray-300 text-gray-700 p-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"
                   >
                     <FaChevronLeft />
                   </button>
@@ -247,7 +243,7 @@ function Portfolio() {
                         className={`transition-all duration-300 ${
                           index === activeTestimonial 
                             ? 'w-8 h-3 bg-cyan-500 rounded-full' 
-                            : 'w-3 h-3 bg-blue-300 rounded-full hover:bg-blue-400'
+                            : 'w-3 h-3 bg-gray-300 rounded-full hover:bg-gray-400'
                         }`}
                       />
                     ))}
@@ -255,7 +251,7 @@ function Portfolio() {
 
                   <button 
                     onClick={nextTestimonial}
-                    className="bg-blue-200 hover:bg-blue-300 text-blue-700 p-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"
+                    className="bg-gray-200 hover:bg-gray-300 text-gray-700 p-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"
                   >
                     <FaChevronRight />
                   </button>
@@ -265,12 +261,12 @@ function Portfolio() {
           </div>
 
           {/* CTA Section */}
-          <div className="text-center mt-12">
-            <div className="bg-white/80 backdrop-blur-lg rounded-2xl p-8 border border-blue-200 shadow-lg max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold text-blue-900 mb-4">
+          <div className="text-center">
+            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200 shadow-sm max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">
                 Ready to Join Our Growing Family?
               </h3>
-              <p className="text-blue-700 mb-6">
+              <p className="text-gray-600 mb-6">
                 Over 200+ satisfied clients trust us for their custom water bottle needs
               </p>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">

@@ -79,30 +79,26 @@ function PurificationProcess() {
   ];
 
   return (
-    <section id="purification" className="py-20 bg-gradient-to-br from-blue-50 via-blue-100 to-cyan-100 relative overflow-hidden">
+    <section id="purification" className="py-20 bg-white relative overflow-hidden">
       
-      {/* Background Effects - Light Version */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-10 left-20 w-80 h-80 bg-cyan-300 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-        <div className="absolute bottom-10 right-20 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
-      </div>
+      {/* Background Effects - Removed */}
 
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
               7-Stage Purification Process
             </h2>
-            <p className="text-xl text-blue-700 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Your trust deserves purity — every drop of Adplus.aqua passes through 7 advanced stages of purification before it's bottled
             </p>
             
             {/* Quality Badge */}
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-100 to-blue-100 backdrop-blur-md px-6 py-3 rounded-full border border-cyan-400 shadow-sm">
+            <div className="inline-flex items-center gap-2 bg-gray-100 px-6 py-3 rounded-full border border-cyan-300 shadow-sm">
               <FaShieldAlt className="text-cyan-600 text-xl" />
-              <span className="text-blue-800 font-semibold">99.9% Pure & Safe</span>
+              <span className="text-gray-700 font-semibold">99.9% Pure & Safe</span>
             </div>
           </div>
 
@@ -112,10 +108,10 @@ function PurificationProcess() {
               <div 
                 key={index}
                 onMouseEnter={() => setActiveStage(index)}
-                className={`bg-white/80 backdrop-blur-md rounded-2xl p-6 border-2 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl ${
+                className={`bg-gray-50 rounded-2xl p-6 border transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md ${
                   activeStage === index 
-                    ? 'border-cyan-400 shadow-cyan-500/25 transform scale-105' 
-                    : 'border-blue-200 hover:border-cyan-400'
+                    ? 'border-cyan-400 transform scale-105' 
+                    : 'border-gray-200 hover:border-cyan-400'
                 }`}
               >
                 {/* Stage Number */}
@@ -129,8 +125,8 @@ function PurificationProcess() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-blue-900 mb-3 text-center">{stage.title}</h3>
-                <p className="text-blue-700 text-sm mb-3 text-center leading-relaxed">{stage.description}</p>
+                <h3 className="text-xl font-bold text-gray-800 mb-3 text-center">{stage.title}</h3>
+                <p className="text-gray-600 text-sm mb-3 text-center leading-relaxed">{stage.description}</p>
                 
                 {/* Detail Badge */}
                 <div className="bg-cyan-50 rounded-lg p-2 text-center border border-cyan-200">
@@ -141,19 +137,19 @@ function PurificationProcess() {
           </div>
 
           {/* Flow Diagram - Visual Representation */}
-          <div className="bg-gradient-to-r from-cyan-100 to-blue-100 rounded-3xl p-8 border border-cyan-300 shadow-lg mb-16">
-            <h3 className="text-3xl font-bold text-blue-900 text-center mb-8">
+          <div className="bg-gray-50 rounded-3xl p-8 border border-gray-200 shadow-sm mb-16">
+            <h3 className="text-3xl font-bold text-gray-800 text-center mb-8">
               Purification Flow
             </h3>
             
-            <div className="flex flex-wrap justify-center items-center gap-4">
+            <div className="flex flex-wrap justify-center items-top gap-4">
               {purificationStages.map((stage, index) => (
                 <React.Fragment key={index}>
                   <div className="flex flex-col items-center">
                     <div className={`bg-gradient-to-r ${stage.color} w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-md`}>
                       {stage.stage}
                     </div>
-                    <span className="text-blue-800 text-xs mt-2 max-w-[80px] text-center font-medium">{stage.title}</span>
+                    <span className="text-gray-700 text-xs mt-2 max-w-[80px] text-center font-medium">{stage.title}</span>
                   </div>
                   {index < purificationStages.length - 1 && (
                     <div className="text-cyan-500 text-2xl hidden sm:block">→</div>
@@ -168,20 +164,20 @@ function PurificationProcess() {
             {certifications.map((cert, index) => (
               <div 
                 key={index}
-                className="bg-white/80 backdrop-blur-md rounded-3xl p-8 border border-blue-200 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="bg-gray-50 rounded-3xl p-8 border border-gray-200 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105 shadow-sm"
               >
                 <div className={`bg-gradient-to-r ${cert.color} w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white text-3xl shadow-md`}>
                   {cert.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-blue-900 text-center mb-2">{cert.name}</h3>
+                <h3 className="text-2xl font-bold text-gray-800 text-center mb-2">{cert.name}</h3>
                 <p className="text-cyan-700 text-center font-semibold">{cert.license}</p>
               </div>
             ))}
           </div>
 
           {/* Quality Assurance Points */}
-          <div className="bg-white/80 backdrop-blur-lg rounded-2xl p-8 border border-blue-200 shadow-lg">
-            <h3 className="text-2xl font-bold text-blue-900 text-center mb-8">
+          <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200 shadow-sm">
+            <h3 className="text-2xl font-bold text-gray-800 text-center mb-8">
               Our Quality Commitment
             </h3>
             
@@ -190,32 +186,32 @@ function PurificationProcess() {
                 <div className="bg-gradient-to-r from-cyan-400 to-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
                   <FaCheckCircle className="text-white text-2xl" />
                 </div>
-                <h4 className="text-blue-900 font-semibold mb-2">Lab Tested</h4>
-                <p className="text-blue-700 text-sm">Every batch tested for purity</p>
+                <h4 className="text-gray-800 font-semibold mb-2">Lab Tested</h4>
+                <p className="text-gray-600 text-sm">Every batch tested for purity</p>
               </div>
 
               <div className="text-center">
                 <div className="bg-gradient-to-r from-blue-400 to-cyan-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
                   <FaShieldAlt className="text-white text-2xl" />
                 </div>
-                <h4 className="text-blue-900 font-semibold mb-2">Food Grade</h4>
-                <p className="text-blue-700 text-sm">BPA-free premium bottles</p>
+                <h4 className="text-gray-800 font-semibold mb-2">Food Grade</h4>
+                <p className="text-gray-600 text-sm">BPA-free premium bottles</p>
               </div>
 
               <div className="text-center">
                 <div className="bg-gradient-to-r from-cyan-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
                   <FaAward className="text-white text-2xl" />
                 </div>
-                <h4 className="text-blue-900 font-semibold mb-2">Certified</h4>
-                <p className="text-blue-700 text-sm">FSSAI & ISO standards</p>
+                <h4 className="text-gray-800 font-semibold mb-2">Certified</h4>
+                <p className="text-gray-600 text-sm">FSSAI & ISO standards</p>
               </div>
 
               <div className="text-center">
                 <div className="bg-gradient-to-r from-blue-500 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
                   <FaFlask className="text-white text-2xl" />
                 </div>
-                <h4 className="text-blue-900 font-semibold mb-2">Fresh</h4>
-                <p className="text-blue-700 text-sm">Ozonation keeps it fresh</p>
+                <h4 className="text-gray-800 font-semibold mb-2">Fresh</h4>
+                <p className="text-gray-600 text-sm">Ozonation keeps it fresh</p>
               </div>
             </div>
           </div>
