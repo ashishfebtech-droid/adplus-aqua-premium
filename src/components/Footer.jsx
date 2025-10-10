@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   FaPhone,
   FaEnvelope,
@@ -7,53 +7,55 @@ import {
   FaInstagram,
   FaArrowRight,
   FaShieldAlt,
-  FaAward
-} from 'react-icons/fa';
+  FaAward,
+} from "react-icons/fa";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Our Process', href: '#process' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Contact', href: '#contact' }
+    { name: "Home", href: "#home" },
+    { name: "About Us", href: "#about" },
+    { name: "Our Process", href: "#process" },
+    { name: "Portfolio", href: "#portfolio" },
+    { name: "Contact", href: "#contact" },
   ];
 
   const services = [
-    { name: 'Hotels & Cafes', href: '#services' },
-    { name: 'Events & Weddings', href: '#services' },
-    { name: 'Campaigns', href: '#services' },
-    { name: 'Corporate', href: '#services' }
+    { name: "Hotels & Cafes", href: "#services" },
+    { name: "Events & Weddings", href: "#services" },
+    { name: "Campaigns", href: "#services" },
+    { name: "Corporate", href: "#services" },
   ];
 
   const contactInfo = [
     {
       icon: <FaPhone className="text-lg" />,
-      info: '+91 9458381868',
-      description: 'Customer Care'
+      info: "+91 9458381868",
+      description: "Customer Care",
     },
     {
       icon: <FaWhatsapp className="text-lg" />,
-      info: '+91 9458381868',
-      description: 'WhatsApp'
+      info: "+91 9458381868",
+      description: "WhatsApp",
     },
     {
       icon: <FaEnvelope className="text-lg" />,
-      info: 'adplus.aqua@gmail.com',
-      description: 'Email Us'
+      info: "adplus.aqua@gmail.com",
+      description: "Email Us",
     },
     {
       icon: <FaMapMarkerAlt className="text-lg" />,
-      info: 'Roorkee, Haridwar',
-      description: 'Uttarakhand'
-    }
+      info: "Roorkee, Haridwar",
+      description: "Uttarakhand",
+    },
   ];
+
+  // Contact Info के नीचे add करो
+  const waterDropImage = 'images/WhatsApp Image 2025-10-10 at 19.33.26_14e6c578.jpg';
 
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-cyan-900 text-white overflow-hidden">
-
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-700 rounded-full blur-3xl"></div>
@@ -62,7 +64,6 @@ function Footer() {
 
       {/* Main Footer Content */}
       <div className="relative z-10">
-
         {/* CTA Section */}
         <div className="border-b border-blue-700/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -71,7 +72,8 @@ function Footer() {
                 Ready to Brand Your Water?
               </h3>
               <p className="text-blue-100 text-lg mb-6 max-w-2xl mx-auto">
-                Get custom branded water bottles that speak your brand story. Minimum order 500 bottles.
+                Get custom branded water bottles that speak your brand story.
+                Minimum order 500 bottles.
               </p>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3 mx-auto">
                 Get Custom Quote
@@ -84,22 +86,28 @@ function Footer() {
         {/* Main Footer Links */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-
             {/* Company Info */}
             <div className="lg:col-span-1">
               <div className="mb-6">
                 {/* Logo */}
                 <a href="#home" className="flex items-center gap-2 group ">
-                  <div className="text-3xl transition-transform duration-300 group-hover:scale-110">💧</div>
+                  <img
+                    src={waterDropImage}
+                    alt="Water Drop"
+                    className="w-10 h-10 object-contain rounded-md"
+                  />
                   <div className="text-white">
                     <h1 className="text-xl sm:text-2xl font-bold tracking-wide">
                       Adplus<span className="text-cyan-300">.aqua</span>
                     </h1>
-                    <p className="text-xs text-blue-100 hidden sm:block">Custom Branded Water</p>
+                    <p className="text-xs text-blue-100 hidden sm:block">
+                      Custom Branded Water
+                    </p>
                   </div>
                 </a>
-                <p className="text-blue-100 leading-relaxed mt-3">
-                  We create customized, high quality packaged drinking water bottles that carry your brand message wherever they go.
+                <p className="text-blue-100 leading-relaxed mt-3 text-left ">
+                  We create customized, high quality packaged drinking water
+                  bottles that carry your brand message wherever they go.
                 </p>
               </div>
 
@@ -118,7 +126,9 @@ function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-lg font-bold mb-6 text-white text-left" >Quick Links</h4>
+              <h4 className="text-lg font-bold mb-6 text-white text-left">
+                Quick Links
+              </h4>
               <ul className="space-y-3">
                 {quickLinks.map((link, index) => (
                   <li key={index}>
@@ -136,7 +146,9 @@ function Footer() {
 
             {/* Services */}
             <div>
-              <h4 className="text-lg font-bold mb-6 text-white text-left">Our Solutions</h4>
+              <h4 className="text-lg font-bold mb-6 text-white text-left">
+                Our Solutions
+              </h4>
               <ul className="space-y-3">
                 {services.map((service, index) => (
                   <li key={index}>
@@ -154,16 +166,23 @@ function Footer() {
 
             {/* Contact Info */}
             <div>
-              <h4 className="text-lg font-bold mb-6 text-white text-left">Contact Us</h4>
+              <h4 className="text-lg font-bold mb-6 text-white text-left">
+                Contact Us
+              </h4>
               <div className="space-y-4">
                 {contactInfo.map((contact, index) => (
-                  <div key={index} className="flex items-center gap-4 text-left">
-                    <div className="text-cyan-300">
-                      {contact.icon}
-                    </div>
+                  <div
+                    key={index}
+                    className="flex items-center gap-4 text-left"
+                  >
+                    <div className="text-cyan-300">{contact.icon}</div>
                     <div>
-                      <div className="font-semibold text-white text-sm">{contact.info}</div>
-                      <div className="text-blue-100 text-xs">{contact.description}</div>
+                      <div className="font-semibold text-white text-sm">
+                        {contact.info}
+                      </div>
+                      <div className="text-blue-100 text-xs">
+                        {contact.description}
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -171,7 +190,9 @@ function Footer() {
 
               {/* Social Links */}
               <div className="mt-6">
-                <h5 className="text-white font-semibold mb-4 text-left">Follow Us</h5>
+                <h5 className="text-white font-semibold mb-4 text-left">
+                  Follow Us
+                </h5>
                 <div className="flex gap-3">
                   <a
                     href="https://www.instagram.com/adplus.aqua"
@@ -190,7 +211,6 @@ function Footer() {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -198,26 +218,30 @@ function Footer() {
         <div className="border-t border-blue-700/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-
               {/* Copyright */}
               <div className="text-blue-100 text-sm text-center md:text-left">
-                © {currentYear} Adplus Aqua. All rights reserved. | FSSAI Lic. No. 12625006000491
+                © {currentYear} Adplus Aqua. All rights reserved. | FSSAI Lic.
+                No. 12625006000491
               </div>
 
               {/* Additional Links */}
               <div className="flex flex-wrap items-center gap-6 text-sm">
-                <a href="#" className="text-blue-100 hover:text-white transition-colors duration-300">
+                <a
+                  href="#"
+                  className="text-blue-100 hover:text-white transition-colors duration-300"
+                >
                   Privacy Policy
                 </a>
-                <a href="#" className="text-blue-100 hover:text-white transition-colors duration-300">
+                <a
+                  href="#"
+                  className="text-blue-100 hover:text-white transition-colors duration-300"
+                >
                   Terms of Service
                 </a>
               </div>
-
             </div>
           </div>
         </div>
-
       </div>
 
       {/* Floating WhatsApp Button */}
@@ -232,7 +256,6 @@ function Footer() {
           <FaWhatsapp className="text-2xl" />
         </a>
       </div>
-
     </footer>
   );
 }

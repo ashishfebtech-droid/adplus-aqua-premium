@@ -1,135 +1,185 @@
-import React from 'react';
-import { FaQuoteLeft, FaHeart, FaLightbulb } from 'react-icons/fa';
+import React from "react";
+import { FaQuoteLeft, FaHeart, FaLightbulb } from "react-icons/fa";
 
 function FoundersMessage() {
   const founders = [
     {
-      name: "Arif Siddiqui",
+      name: "Dr. Arif Siddiqui",
       role: "Co-Founder",
-      message: "EK HEALTHCARE PROFESSIONAL HONE KE NATE, MAIN JAANTA HOON KI SHUDDH PAANI HAMARI HEALTH KE LIYE KITNA ZARURI HAI. AUR EK ENTREPRENEUR HONE KE NATE, MAIN MAANTA HOON KI HAR BRAND KE LIYE SABSE ZARURI HOTA HAI ADVERTISEMENT AND MARKETING, TO KYU NA IN DONO KO EK SATH JOD DIYA JAYE TO ISI SOCH KE SATH HAMNE SHURU KIYA ADPLUS.AQUA - PURITY AUR PERSONALIZATION KA PERFECT COMBINATION.",
-      vision: "HUMARA AIM HAI KI HAR BOTTLE KE ZARIYE LOGON TAK EK SOCH, EK STYLE AUR EK STANDARD PAHUNCHAYEIN.",
-      color: "from-cyan-400 to-blue-500",
-      icon: <FaHeart />
+      message:
+        "Ek healthcare professional hone ke nate, main jaanta hoon ki shuddh paani hamari health ke liye kitna zaruri hai. Aur ek entrepreneur hone ke nate, main maanta hoon ki har brand ke liye sabse zaruri hota hai advertisement and marketing, to kyu na in dono ko ek sath jod diya jaye to isi soch ke sath hamne shuru kiya Adplus.aqua - purity aur personalization ka perfect combination.",
+      vision:
+        "Humara aim hai ki har bottle ke zariye logon tak ek soch, ek style aur ek standard pahunchayein.",
+      color: "from-cyan-500 to-blue-600",
+      icon: <FaHeart />,
+      image:
+        "images/20251010_2034_Confident Co-Founder Portrait_remix_01k77ab0evfags6zknzwz1t7tk.png",
     },
     {
-      name: "Subhan Khan",
+      name: "Eng. Subhan Khan",
       role: "Co-Founder",
-      message: "ADPLUS.AQUA KA SAFAR EK SIMPLE VICHAR SE SHURU HUA — PAANI SIRF EK ZARURAT NAHI, EK PEHCHAAN BHI HO SAKTA HAI. HOSPITALITY, EVENTS AUR CAMPAIGNS KE DAURAAN JAB LOG BOTTLED WATER LETE HAIN, HUMNE SOCHA KYUN NA US BOTTLE PAR UNKI APNI KAHANI LIKHI JAAYE",
-      vision: "AAAJ ADPLUS.AQUA ISI SOCH KO AAGE BADHA RAHA HAI - HAR BOTTLE EK STORY, HAR SIP EK EXPERIENCE.",
-      color: "from-blue-400 to-cyan-500",
-      icon: <FaLightbulb />
-    }
+      message:
+        "Adplus.aqua ka safar ek simple vichar se shuru hua — paani sirf ek zarurat nahi, ek pehchaan bhi ho sakta hai. Hospitality, events aur campaigns ke dauraan jab log bottled water lete hain, humne socha kyun na uss bottle par unki apni kahani likhi jaaye",
+      vision:
+        "Aaj Adplus.aqua isi soch ko aage badha raha hai - har bottle ek story, har sip ek experience.",
+      color: "from-blue-500 to-cyan-600",
+      icon: <FaLightbulb />,
+      image:
+        "images/20251010_2040_Confident Entrepreneur Portrait_remix_01k77apfj5fc9t131cw0mmxx63.png",
+    },
   ];
 
   return (
-    <section id="founders" className="py-20 bg-blue-50 relative overflow-hidden">
-      
-      {/* Background Effects - Very Light */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 right-10 w-80 h-80 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl"></div>
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-cyan-200 rounded-full mix-blend-multiply filter blur-xl"></div>
+    <section
+      id="founders"
+      className="py-20 bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100 relative overflow-hidden"
+    >
+      {/* Background Effects */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 right-10 w-80 h-80 bg-cyan-300 rounded-full mix-blend-multiply filter blur-xl"></div>
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl"></div>
       </div>
 
       <div className="relative z-10">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
               Meet Our Founders
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The visionaries behind Adplus.aqua's journey of purity and personalization
+            <p className="text-xl text-blue-700 max-w-3xl mx-auto">
+              The visionaries behind Adplus.aqua's journey of purity and
+              personalization
             </p>
           </div>
 
-          {/* Founders Cards */}
-          <div className="space-y-12">
+          {/* Founders Cards - FIXED HEIGHT ALIGNMENT */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
             {founders.map((founder, index) => (
-              <div 
+              <div
                 key={index}
-                className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300"
+                className="bg-white/90 backdrop-blur-md rounded-3xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-cyan-400 flex flex-col h-full"
               >
-                {/* Founder Header - Better Alignment */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-8">
-                  {/* Icon */}
-                  <div className={`bg-gradient-to-r ${founder.color} w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl flex-shrink-0 shadow-md`}>
-                    {founder.icon}
-                  </div>
-                  
-                  {/* Name & Role */}
-                  <div className="flex-1">
-                    <h3 className="text-3xl font-bold text-gray-800 mb-2">{founder.name}</h3>
-                    <p className="text-cyan-600 font-semibold text-lg">{founder.role}</p>
+                {/* Image - LARGE AND CENTERED */}
+                <div className="flex justify-center mb-6">
+                  <div className="relative">
+                    <img
+                      src={founder.image}
+                      alt={founder.name}
+                      className="w-40 h-40 rounded-full object-cover border-4 border-white shadow-2xl"
+                    />
+                    {/* Icon Badge */}
+                    <div
+                      className={`absolute -bottom-3 -right-3 bg-gradient-to-r ${founder.color} w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg border-2 border-white`}
+                    >
+                      {founder.icon}
+                    </div>
                   </div>
                 </div>
 
-                {/* Quote Section - Better Structure */}
-                <div className="flex items-start gap-4 mb-6">
-                  {/* Quote Icon */}
-                  <div className={`bg-gradient-to-r ${founder.color} w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md mt-1`}>
-                    <FaQuoteLeft className="text-white text-lg" />
+                {/* Name & Role */}
+                <div className="text-center mb-6">
+                  <h3 className="text-3xl font-bold text-blue-900 mb-2">
+                    {founder.name}
+                  </h3>
+                  <div className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2 rounded-full">
+                    <p className="text-white font-semibold text-lg">
+                      {founder.role}
+                    </p>
                   </div>
-                  
+                </div>
+
+                {/* Quote Section */}
+                <div className="flex flex-col items-center gap-4 mb-6 flex-1">
+                  {/* Quote Icon */}
+                  <div
+                    className={`bg-gradient-to-r ${founder.color} w-16 h-16 rounded-full flex items-center justify-center shadow-lg`}
+                  >
+                    <FaQuoteLeft className="text-white text-2xl" />
+                  </div>
+
                   {/* Message */}
-                  <div className="flex-1">
-                    <p className="text-gray-600 text-lg leading-relaxed italic">
+                  <div className="text-center flex-1">
+                    <p className="text-blue-800 text-lg leading-relaxed italic font-medium">
                       "{founder.message}"
                     </p>
                   </div>
                 </div>
 
-                {/* Vision Box - Better Alignment */}
-                <div className={`bg-gradient-to-r ${founder.color} bg-opacity-10 rounded-2xl p-6 border border-cyan-200 mt-6`}>
-                  <div className="flex items-start gap-4">
-                    <div className={`bg-gradient-to-r ${founder.color} w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 text-white shadow-sm mt-1`}>
-                      {founder.icon}
+                {/* Vision Box - FIXED BOTTOM ALIGNMENT */}
+                <div
+                  className={`bg-gradient-to-r ${founder.color} rounded-2xl p-6 border-2 border-cyan-300 shadow-md mt-auto`}
+                >
+                  <div className="flex flex-col items-center text-center gap-4">
+                    <div
+                      className={`bg-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg`}
+                    >
+                      <div
+                        className={`bg-gradient-to-r ${founder.color} w-12 h-12 rounded-full flex items-center justify-center text-white`}
+                      >
+                        {founder.icon}
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h4 className="text-cyan-700 font-semibold text-lg mb-3">Our Vision</h4>
-                      <p className="text-gray-700 font-medium leading-relaxed">
+                    <div>
+                      <h4 className="text-white font-bold text-xl mb-3">
+                        Our Vision
+                      </h4>
+                      <p className="text-white font-semibold leading-relaxed text-lg">
                         {founder.vision}
                       </p>
                     </div>
                   </div>
                 </div>
-
               </div>
             ))}
           </div>
 
           {/* Company Journey Timeline */}
-          <div className="mt-16 bg-gray-50 rounded-3xl p-8 border border-gray-200 shadow-sm">
-            <h3 className="text-3xl font-bold text-gray-800 text-center mb-8">Our Journey</h3>
+          <div className="bg-white/90 backdrop-blur-md rounded-3xl p-8 border-2 border-blue-200 shadow-lg">
+            <h3 className="text-3xl font-bold text-blue-900 text-center mb-8">
+              Our Journey
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              
               <div className="text-center">
-                <div className="bg-gradient-to-r from-cyan-400 to-blue-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                  <span className="text-white text-2xl font-bold">💡</span>
+                <div className="bg-gradient-to-r from-cyan-500 to-blue-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <span className="text-white text-3xl">💡</span>
                 </div>
-                <h4 className="text-xl font-bold text-gray-800 mb-3">The Idea</h4>
-                <p className="text-gray-600">Combining healthcare expertise with entrepreneurial vision to create something unique</p>
+                <h4 className="text-2xl font-bold text-blue-900 mb-3">
+                  The Idea
+                </h4>
+                <p className="text-blue-700">
+                  Combining healthcare expertise with entrepreneurial vision to
+                  create something unique
+                </p>
               </div>
 
               <div className="text-center">
-                <div className="bg-gradient-to-r from-blue-400 to-cyan-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                  <span className="text-white text-2xl font-bold">🚀</span>
+                <div className="bg-gradient-to-r from-blue-500 to-cyan-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <span className="text-white text-3xl">🚀</span>
                 </div>
-                <h4 className="text-xl font-bold text-gray-800 mb-3">The Launch</h4>
-                <p className="text-gray-600">Started Adplus.aqua with a mission to transform how brands connect through water</p>
+                <h4 className="text-2xl font-bold text-blue-900 mb-3">
+                  The Launch
+                </h4>
+                <p className="text-blue-700">
+                  Started Adplus.aqua with a mission to transform how brands
+                  connect through water
+                </p>
               </div>
 
               <div className="text-center">
-                <div className="bg-gradient-to-r from-cyan-500 to-blue-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                  <span className="text-white text-2xl font-bold">🌟</span>
+                <div className="bg-gradient-to-r from-cyan-600 to-blue-700 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <span className="text-white text-3xl">🌟</span>
                 </div>
-                <h4 className="text-xl font-bold text-gray-800 mb-3">The Impact</h4>
-                <p className="text-gray-600">Serving 200+ clients across hotels, events, and corporate sector with pride</p>
+                <h4 className="text-2xl font-bold text-blue-900 mb-3">
+                  The Impact
+                </h4>
+                <p className="text-blue-700">
+                  Serving 200+ clients across hotels, events, and corporate
+                  sector with pride
+                </p>
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
     </section>

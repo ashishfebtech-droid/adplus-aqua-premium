@@ -1,8 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { 
-  FaBars, FaTimes, FaInstagram, FaWhatsapp,
-  FaHome, FaInfoCircle, FaBox, FaUsers, FaFlask, FaPhoneAlt 
-} from 'react-icons/fa';
+import React, { useState, useEffect } from "react";
+import {
+  FaBars,
+  FaTimes,
+  FaInstagram,
+  FaWhatsapp,
+  FaHome,
+  FaInfoCircle,
+  FaBox,
+  FaUsers,
+  FaFlask,
+  FaPhoneAlt,
+} from "react-icons/fa";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,58 +27,79 @@ function Header() {
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
   // Sidebar open hone par scroll disable karne ka effect
   useEffect(() => {
     if (isMobileMenuOpen) {
-      // Scroll disable karo
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      // Scroll enable karo
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
 
-    // Cleanup function
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isMobileMenuOpen]);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
-  
+
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   const navItems = [
-    { name: 'Home', icon: <FaHome />, href: '#home' },
-    { name: 'About', icon: <FaInfoCircle />, href: '#about' },
-    { name: 'Products', icon: <FaBox />, href: '#products' },
-    { name: 'Portfolio', icon: <FaUsers />, href: '#portfolio' },
-    { name: 'Purification', icon: <FaFlask />, href: '#purification' },
-    { name: 'Contact', icon: <FaPhoneAlt />, href: '#contact' }
+    { name: "Home", icon: <FaHome />, href: "#home" },
+    { name: "About", icon: <FaInfoCircle />, href: "#about" },
+    { name: "Products", icon: <FaBox />, href: "#products" },
+    { name: "Portfolio", icon: <FaUsers />, href: "#portfolio" },
+    { name: "Purification", icon: <FaFlask />, href: "#purification" },
+    { name: "Contact", icon: <FaPhoneAlt />, href: "#contact" },
   ];
+
+  // Water drop image path - apni actual image ka path yahan daalen
+  const waterDropImage =
+    "images/WhatsApp Image 2025-10-10 at 19.33.26_14e6c578.jpg"; // Ya fir CDN link
 
   return (
     <>
       {/* Header */}
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-blue-800/95 backdrop-blur-md shadow-lg py-3' 
-            : 'bg-blue-800/90 backdrop-blur-sm py-5'
-        } ${showHeader ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}
+          isScrolled
+            ? "bg-blue-800/95 backdrop-blur-md shadow-lg py-3"
+            : "bg-blue-800/90 backdrop-blur-sm py-5"
+        } ${
+          showHeader
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-full opacity-0"
+        }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          {/* Logo */}
+          {/* Logo - WITH WATER DROP IMAGE */}
           <a href="#home" className="flex items-center gap-2 group">
-            <div className="text-3xl transition-transform duration-300 group-hover:scale-110">💧</div>
+            {/* Water Drop Image */}
+            <div className="transition-transform duration-300 group-hover:scale-110">
+              <img
+                src={waterDropImage}
+                alt="Water Drop"
+                className="w-10 h-10 object-contain rounded-md" // Size adjust karo image ke hisaab se
+                onError={(e) => {
+                  // Agar image load na ho to emoji show karo
+                  e.target.style.display = "none";
+                  e.target.nextSibling.style.display = "block";
+                }}
+              />
+              {/* Fallback emoji agar image load na ho */}
+              <span className="text-3xl hidden">💧</span>
+            </div>
             <div className="text-white">
               <h1 className="text-xl sm:text-2xl font-bold tracking-wide">
                 Adplus<span className="text-cyan-300">.aqua</span>
               </h1>
-              <p className="text-xs text-blue-100  sm:block">Custom Branded Water</p>
+              <p className="text-xs text-blue-100 sm:block">
+                Custom Branded Water
+              </p>
             </div>
           </a>
 
@@ -99,10 +128,10 @@ function Header() {
             >
               Get Quote
             </a>
-            
+
             {/* Social Icons */}
             <div className="flex gap-3 text-white text-xl">
-              <a 
+              <a
                 href="https://www.instagram.com/adplus.aqua?igsh=cGUwYzNsNTd0NWJx&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -111,7 +140,7 @@ function Header() {
               >
                 <FaInstagram />
               </a>
-              <a 
+              <a
                 href="https://wa.me/919458381868"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -137,21 +166,34 @@ function Header() {
       {/* Mobile Sidebar Overlay */}
       <div
         className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity duration-300 lg:hidden ${
-          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+          isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
         onClick={closeMobileMenu}
       ></div>
 
-      {/* Mobile Sidebar */}
+      {/* Mobile Sidebar - WITH WATER DROP IMAGE */}
       <aside
         className={`fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-gradient-to-b from-blue-800 via-blue-700 to-cyan-800 z-50 transform transition-transform duration-300 flex flex-col shadow-2xl lg:hidden ${
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Sidebar Header */}
+        {/* Sidebar Header - WITH WATER DROP IMAGE */}
         <div className="bg-cyan-600/30 backdrop-blur-md text-white flex justify-between items-center p-6 shadow-md border-b border-cyan-400/20">
           <div className="flex items-center gap-2">
-            <span className="text-2xl">💧</span>
+            {/* Water Drop Image */}
+            <div>
+              <img
+                src={waterDropImage}
+                alt="Water Drop"
+                className="w-10 h-10 object-contain rounded-md"
+                onError={(e) => {
+                  e.target.style.display = "none";
+                  e.target.nextSibling.style.display = "block";
+                }}
+              />
+              {/* Fallback emoji */}
+              <span className="text-2xl hidden">💧</span>
+            </div>
             <div>
               <h2 className="text-xl font-bold">
                 Adplus<span className="text-cyan-300">.aqua</span>
@@ -159,8 +201,8 @@ function Header() {
               <p className="text-xs text-blue-100">Custom Branded Water</p>
             </div>
           </div>
-          <button 
-            className="text-2xl hover:rotate-90 transition-transform duration-300 text-cyan-300" 
+          <button
+            className="text-2xl hover:rotate-90 transition-transform duration-300 text-cyan-300"
             onClick={closeMobileMenu}
             aria-label="Close menu"
           >
@@ -192,13 +234,13 @@ function Header() {
           >
             Get Free Quote
           </a>
-          
+
           <p className="text-blue-100 text-sm mb-3 text-center font-medium">
             💧 Purity with Personalization
           </p>
-          
+
           <div className="flex justify-center gap-6 text-white text-2xl">
-            <a 
+            <a
               href="https://www.instagram.com/adplus.aqua?igsh=cGUwYzNsNTd0NWJx&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
@@ -207,7 +249,7 @@ function Header() {
             >
               <FaInstagram />
             </a>
-            <a 
+            <a
               href="https://wa.me/919458381868"
               target="_blank"
               rel="noopener noreferrer"
