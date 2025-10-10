@@ -70,7 +70,7 @@ function Header() {
               <h1 className="text-xl sm:text-2xl font-bold tracking-wide">
                 Adplus<span className="text-cyan-300">.aqua</span>
               </h1>
-              <p className="text-xs text-blue-100 hidden sm:block">Custom Branded Water</p>
+              <p className="text-xs text-blue-100  sm:block">Custom Branded Water</p>
             </div>
           </a>
 
