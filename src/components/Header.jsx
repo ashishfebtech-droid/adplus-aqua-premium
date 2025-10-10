@@ -23,7 +23,24 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
+  // Sidebar open hone par scroll disable karne ka effect
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      // Scroll disable karo
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Scroll enable karo
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
+
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   const navItems = [
