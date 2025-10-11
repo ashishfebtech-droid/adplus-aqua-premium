@@ -7,7 +7,7 @@ function Hero() {
   // Custom branded bottles images
   const bottleImages = [
     'images/AQUA1.jpg',
-    'images/AQUA2.jpg', 
+    'images/AQUA2.jpg',
     'images/AQUA3.jpg',
     'images/AQUA3.jpg'
   ];
@@ -26,18 +26,10 @@ function Hero() {
       {/* Content - Pure White Background */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-end">
-          
+
           {/* Left Side - Text Content */}
           <div className="text-center lg:text-left">
-            {/* Certification Badges */}
-            <div className="flex justify-center lg:justify-start gap-4 mb-6">
-              <div className="bg-green-500 px-4 py-2 rounded-full border border-green-600">
-                <span className="text-white font-bold text-sm">FSSAI Certified</span>
-              </div>
-              <div className="bg-blue-500 px-4 py-2 rounded-full border border-blue-600">
-                <span className="text-white font-bold text-sm">ISO Certified</span>
-              </div>
-            </div>
+
 
             {/* Main Heading */}
             <div className="mb-8">
@@ -47,6 +39,35 @@ function Hero() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl text-cyan-600 font-light mb-6">
                 Custom Branded Water Bottles
               </h2>
+              {/* Certification Badges */}
+              {/* Certification Badges with Images */}
+              <div className="flex justify-center lg:justify-start gap-4 mb-6">
+                <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30 flex items-center gap-2">
+                  <img
+                    src="images/fssai_login.jpg"
+                    alt="FSSAI Certified"
+                    className="w-50 h-20 object-contain border-2 text-cyan-600 rounded-lg"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'block';
+                    }}
+                  />
+                  {/* Fallback text agar image load na ho */}
+                 
+                </div>
+
+                <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30 flex items-center gap-2">
+                  <img
+                    src="images/ISO.jpg"
+                    alt="ISO Certified"
+                    className="w-20 h-20 object-contain border-2 text-cyan-600 rounded-lg"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'block';
+                    }}
+                  />
+                </div>
+              </div>
               <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl">
                 We create customized, high quality packaged drinking water bottles that carry your brand message wherever they go
               </p>
@@ -95,23 +116,23 @@ function Hero() {
           <div className="relative">
             <div className="bg-white rounded-3xl p-6 border border-gray-200 shadow-lg">
               <h3 className="text-gray-800 text-xl font-bold text-center mb-6">Our Custom Bottles</h3>
-              
+
               {/* Main Bottle Image */}
               <div className="relative h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden mb-4 bg-gray-100">
-                <img 
-                  src={bottleImages[currentBottle]} 
+                <img
+                  src={bottleImages[currentBottle]}
                   alt={`Custom bottle design ${currentBottle + 1}`}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
-                
+
                 {/* Navigation Arrows */}
-                <button 
+                <button
                   onClick={prevBottle}
                   className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800/80 hover:bg-gray-900 text-white p-2 rounded-full transition-all duration-300"
                 >
                   <FaChevronLeft />
                 </button>
-                <button 
+                <button
                   onClick={nextBottle}
                   className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800/80 hover:bg-gray-900 text-white p-2 rounded-full transition-all duration-300"
                 >
@@ -125,14 +146,13 @@ function Hero() {
                   <button
                     key={index}
                     onClick={() => setCurrentBottle(index)}
-                    className={`relative h-16 rounded-lg overflow-hidden transition-all duration-300 bg-gray-100 ${
-                      index === currentBottle 
-                        ? 'ring-2 ring-cyan-500 transform scale-105' 
+                    className={`relative h-16 rounded-lg overflow-hidden transition-all duration-300 bg-gray-100 ${index === currentBottle
+                        ? 'ring-2 ring-cyan-500 transform scale-105'
                         : 'opacity-70 hover:opacity-100'
-                    }`}
+                      }`}
                   >
-                    <img 
-                      src={image} 
+                    <img
+                      src={image}
                       alt={`Thumbnail ${index + 1}`}
                       className="w-full h-full object-cover"
                     />

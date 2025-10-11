@@ -31,21 +31,18 @@ function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  // Sidebar open hone par scroll disable karne ka effect
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
     }
-
     return () => {
       document.body.style.overflow = "unset";
     };
   }, [isMobileMenuOpen]);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
-
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   const navItems = [
@@ -56,17 +53,16 @@ function Header() {
     { name: "Contact", icon: <FaPhoneAlt />, href: "#contact" },
   ];
 
-  // Water drop image path - apni actual image ka path yahan daalen
-  const waterDropImage = "images/addpluslogo.png"; // Ya fir CDN link
+  const waterDropImage = "images/addpluslogo.png";
 
   return (
     <>
-      {/* Header - BACKGROUND CHANGED FOR LOGO VISIBILITY */}
+      {/* Header - LIGHT BACKGROUND */}
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-slate-900/95 backdrop-blur-md shadow-lg py-3 border-b border-cyan-500/20"
-            : "bg-slate-900/90 backdrop-blur-sm py-5"
+            ? "bg-cyan-50 backdrop-blur-md shadow-lg py-3 border-b border-gray-200"
+            : "bg-cyan-50 backdrop-blur-sm py-5"
         } ${
           showHeader
             ? "translate-y-0 opacity-100"
@@ -74,28 +70,25 @@ function Header() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          {/* Logo - WITH WATER DROP IMAGE */}
+          {/* Logo */}
           <a href="#home" className="flex items-center gap-3 group">
-            {/* Water Drop Image */}
-            <div className="transition-transform duration-300 group-hover:scale-110 bg-white/10 p-2 rounded-lg border border-cyan-400/30">
+            <div className="transition-transform duration-300 group-hover:scale-110">
               <img
                 src={waterDropImage}
                 alt="Adplus Aqua Logo"
                 className="w-8 h-8 object-contain"
                 onError={(e) => {
-                  // Agar image load na ho to emoji show karo
                   e.target.style.display = "none";
                   e.target.nextSibling.style.display = "block";
                 }}
               />
-              {/* Fallback emoji agar image load na ho */}
               <span className="text-2xl hidden">💧</span>
             </div>
-            <div className="text-white">
+            <div className="text-gray-800">
               <h1 className="text-xl sm:text-2xl font-bold tracking-wide">
-                Adplus<span className="text-cyan-300">.aqua</span>
+                Adplus<span className="text-cyan-600">.aqua</span>
               </h1>
-              <p className="text-xs text-cyan-200 hidden sm:block">
+              <p className="text-xs text-gray-600 hidden sm:block">
                 Custom Branded Water
               </p>
             </div>
@@ -107,18 +100,18 @@ function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="group relative px-3 xl:px-4 py-2 text-white font-medium rounded-lg hover:bg-cyan-500/20 transition-all duration-300 hover:scale-105"
+                className="group relative px-3 xl:px-4 py-2 text-gray-700 font-medium rounded-lg hover:bg-cyan-50 transition-all duration-300 hover:scale-105"
               >
                 <span className="flex items-center gap-2">
-                  <span className="text-sm text-cyan-300">{item.icon}</span>
+                  <span className="text-sm text-cyan-600">{item.icon}</span>
                   <span className="text-sm">{item.name}</span>
                 </span>
-                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-cyan-300 transition-all duration-300 transform -translate-x-1/2 group-hover:w-3/4"></span>
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-cyan-600 transition-all duration-300 transform -translate-x-1/2 group-hover:w-3/4"></span>
               </a>
             ))}
           </nav>
 
-          {/* CTA Button + Social Icons (desktop) */}
+          {/* CTA Button + Social Icons */}
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="#contact"
@@ -127,14 +120,12 @@ function Header() {
               Get Quote
             </a>
 
-            {/* Social Icons */}
-            <div className="flex gap-3 text-white text-xl">
+            <div className="flex gap-3 text-gray-700 text-xl">
               <a
                 href="https://www.instagram.com/adplus.aqua?igsh=cGUwYzNsNTd0NWJx&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-cyan-300 hover:scale-110 transition-all duration-300"
-                aria-label="Instagram"
+                className="hover:text-cyan-600 hover:scale-110 transition-all duration-300"
               >
                 <FaInstagram />
               </a>
@@ -142,19 +133,17 @@ function Header() {
                 href="https://wa.me/919458381868"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-cyan-300 hover:scale-110 transition-all duration-300"
-                aria-label="WhatsApp"
+                className="hover:text-cyan-600 hover:scale-110 transition-all duration-300"
               >
                 <FaWhatsapp />
               </a>
             </div>
           </div>
 
-          {/* Hamburger Button (mobile) */}
+          {/* Hamburger Button */}
           <button
-            className="lg:hidden text-white text-2xl focus:outline-none hover:scale-110 transition-transform duration-200 bg-white/10 p-2 rounded-lg border border-cyan-400/30"
+            className="lg:hidden text-gray-700 text-2xl focus:outline-none hover:scale-110 transition-transform duration-200"
             onClick={toggleMobileMenu}
-            aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -169,17 +158,16 @@ function Header() {
         onClick={closeMobileMenu}
       ></div>
 
-      {/* Mobile Sidebar - BACKGROUND CHANGED */}
+      {/* Mobile Sidebar - LIGHT BACKGROUND */}
       <aside
-        className={`fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-gradient-to-b from-slate-900 via-blue-900 to-purple-900 z-50 transform transition-transform duration-300 flex flex-col shadow-2xl lg:hidden ${
+        className={`fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-white z-50 transform transition-transform duration-300 flex flex-col shadow-2xl lg:hidden ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* Sidebar Header */}
-        <div className="bg-cyan-600/30 backdrop-blur-md text-white flex justify-between items-center p-6 shadow-md border-b border-cyan-400/20">
+        <div className="bg-cyan-50 text-gray-800 flex justify-between items-center p-6 shadow-md border-b border-gray-200">
           <div className="flex items-center gap-3">
-            {/* Water Drop Image */}
-            <div className="bg-white/10 p-2 rounded-lg border border-cyan-400/30">
+            <div>
               <img
                 src={waterDropImage}
                 alt="Adplus Aqua Logo"
@@ -189,20 +177,18 @@ function Header() {
                   e.target.nextSibling.style.display = "block";
                 }}
               />
-              {/* Fallback emoji */}
               <span className="text-xl hidden">💧</span>
             </div>
             <div>
               <h2 className="text-xl font-bold">
-                Adplus<span className="text-cyan-300">.aqua</span>
+                Adplus<span className="text-cyan-600">.aqua</span>
               </h2>
-              <p className="text-xs text-cyan-200">Custom Branded Water</p>
+              <p className="text-xs text-gray-600">Custom Branded Water</p>
             </div>
           </div>
           <button
-            className="text-2xl hover:rotate-90 transition-transform duration-300 text-cyan-300"
+            className="text-2xl hover:rotate-90 transition-transform duration-300 text-cyan-600"
             onClick={closeMobileMenu}
-            aria-label="Close menu"
           >
             <FaTimes />
           </button>
@@ -215,16 +201,16 @@ function Header() {
               key={item.name}
               href={item.href}
               onClick={closeMobileMenu}
-              className="flex items-center gap-4 p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-cyan-500/20 hover:border-cyan-400/50 hover:translate-x-1 transition-all duration-200 text-white font-medium"
+              className="flex items-center gap-4 p-4 rounded-lg bg-gray-50 border border-gray-200 hover:bg-cyan-50 hover:border-cyan-200 hover:translate-x-1 transition-all duration-200 text-gray-700 font-medium"
             >
-              <span className="text-xl text-cyan-300">{item.icon}</span>
+              <span className="text-xl text-cyan-600">{item.icon}</span>
               <span>{item.name}</span>
             </a>
           ))}
         </nav>
 
         {/* Sidebar Footer */}
-        <div className="p-6 border-t border-cyan-400/20 bg-white/5 backdrop-blur-md">
+        <div className="p-6 border-t border-gray-200 bg-gray-50">
           <a
             href="#contact"
             onClick={closeMobileMenu}
@@ -233,17 +219,16 @@ function Header() {
             Get Free Quote
           </a>
 
-          <p className="text-cyan-200 text-sm mb-3 text-center font-medium">
+          <p className="text-gray-600 text-sm mb-3 text-center font-medium">
             💧 Purity with Personalization
           </p>
 
-          <div className="flex justify-center gap-6 text-white text-2xl">
+          <div className="flex justify-center gap-6 text-gray-700 text-2xl">
             <a
               href="https://www.instagram.com/adplus.aqua?igsh=cGUwYzNsNTd0NWJx&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-cyan-300 hover:scale-125 transition-all duration-300"
-              aria-label="Instagram"
+              className="hover:text-cyan-600 hover:scale-125 transition-all duration-300"
             >
               <FaInstagram />
             </a>
@@ -251,17 +236,15 @@ function Header() {
               href="https://wa.me/919458381868"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-cyan-300 hover:scale-125 transition-all duration-300"
-              aria-label="WhatsApp"
+              className="hover:text-cyan-600 hover:scale-125 transition-all duration-300"
             >
               <FaWhatsapp />
             </a>
           </div>
 
-          {/* Contact Info */}
           <div className="mt-4 text-center">
-            <p className="text-cyan-200 text-xs">📞 +91 9458381868</p>
-            <p className="text-cyan-200 text-xs">📧 adplus.aqua@gmail.com</p>
+            <p className="text-gray-600 text-xs">📞 +91 9458381868</p>
+            <p className="text-gray-600 text-xs">📧 adplus.aqua@gmail.com</p>
           </div>
         </div>
       </aside>
