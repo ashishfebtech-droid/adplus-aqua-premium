@@ -13,7 +13,7 @@ function FoundersMessage() {
       color: "from-cyan-500 to-blue-600",
       icon: <FaHeart />,
       image:
-        "images/20251010_2034_Confident Co-Founder Portrait_remix_01k77ab0evfags6zknzwz1t7tk.png",
+        "images/D.jpeg",
     },
     {
       name: "Eng. Subhan Khan",
@@ -25,7 +25,7 @@ function FoundersMessage() {
       color: "from-blue-500 to-cyan-600",
       icon: <FaLightbulb />,
       image:
-        "images/20251010_2040_Confident Entrepreneur Portrait_remix_01k77apfj5fc9t131cw0mmxx63.png",
+        "images/En.jpeg",
     },
   ];
 

@@ -9,7 +9,7 @@ function Hero() {
     'images/AQUA1.jpg',
     'images/AQUA2.jpg', 
     'images/AQUA3.jpg',
-    'images/AQUA3.jpg',
+    'images/AQUA3.jpg'
   ];
 
   // Bottle carousel navigation

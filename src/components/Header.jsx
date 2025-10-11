@@ -51,24 +51,22 @@ function Header() {
   const navItems = [
     { name: "Home", icon: <FaHome />, href: "#home" },
     { name: "About", icon: <FaInfoCircle />, href: "#about" },
-    { name: "Products", icon: <FaBox />, href: "#products" },
+    { name: "Process", icon: <FaFlask />, href: "#process" },
     { name: "Portfolio", icon: <FaUsers />, href: "#portfolio" },
-    { name: "Purification", icon: <FaFlask />, href: "#purification" },
     { name: "Contact", icon: <FaPhoneAlt />, href: "#contact" },
   ];
 
   // Water drop image path - apni actual image ka path yahan daalen
-  const waterDropImage =
-    "images/WhatsApp Image 2025-10-10 at 19.33.26_14e6c578.jpg"; // Ya fir CDN link
+  const waterDropImage = "images/addpluslogo.png"; // Ya fir CDN link
 
   return (
     <>
-      {/* Header */}
+      {/* Header - BACKGROUND CHANGED FOR LOGO VISIBILITY */}
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-blue-800/95 backdrop-blur-md shadow-lg py-3"
-            : "bg-blue-800/90 backdrop-blur-sm py-5"
+            ? "bg-slate-900/95 backdrop-blur-md shadow-lg py-3 border-b border-cyan-500/20"
+            : "bg-slate-900/90 backdrop-blur-sm py-5"
         } ${
           showHeader
             ? "translate-y-0 opacity-100"
@@ -77,13 +75,13 @@ function Header() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           {/* Logo - WITH WATER DROP IMAGE */}
-          <a href="#home" className="flex items-center gap-2 group">
+          <a href="#home" className="flex items-center gap-3 group">
             {/* Water Drop Image */}
-            <div className="transition-transform duration-300 group-hover:scale-110">
+            <div className="transition-transform duration-300 group-hover:scale-110 bg-white/10 p-2 rounded-lg border border-cyan-400/30">
               <img
                 src={waterDropImage}
-                alt="Water Drop"
-                className="w-10 h-10 object-contain rounded-md" // Size adjust karo image ke hisaab se
+                alt="Adplus Aqua Logo"
+                className="w-8 h-8 object-contain"
                 onError={(e) => {
                   // Agar image load na ho to emoji show karo
                   e.target.style.display = "none";
@@ -91,13 +89,13 @@ function Header() {
                 }}
               />
               {/* Fallback emoji agar image load na ho */}
-              <span className="text-3xl hidden">💧</span>
+              <span className="text-2xl hidden">💧</span>
             </div>
             <div className="text-white">
               <h1 className="text-xl sm:text-2xl font-bold tracking-wide">
                 Adplus<span className="text-cyan-300">.aqua</span>
               </h1>
-              <p className="text-xs text-blue-100 sm:block">
+              <p className="text-xs text-cyan-200 hidden sm:block">
                 Custom Branded Water
               </p>
             </div>
@@ -154,7 +152,7 @@ function Header() {
 
           {/* Hamburger Button (mobile) */}
           <button
-            className="lg:hidden text-white text-2xl focus:outline-none hover:scale-110 transition-transform duration-200"
+            className="lg:hidden text-white text-2xl focus:outline-none hover:scale-110 transition-transform duration-200 bg-white/10 p-2 rounded-lg border border-cyan-400/30"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
@@ -171,34 +169,34 @@ function Header() {
         onClick={closeMobileMenu}
       ></div>
 
-      {/* Mobile Sidebar - WITH WATER DROP IMAGE */}
+      {/* Mobile Sidebar - BACKGROUND CHANGED */}
       <aside
-        className={`fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-gradient-to-b from-blue-800 via-blue-700 to-cyan-800 z-50 transform transition-transform duration-300 flex flex-col shadow-2xl lg:hidden ${
+        className={`fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-gradient-to-b from-slate-900 via-blue-900 to-purple-900 z-50 transform transition-transform duration-300 flex flex-col shadow-2xl lg:hidden ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Sidebar Header - WITH WATER DROP IMAGE */}
+        {/* Sidebar Header */}
         <div className="bg-cyan-600/30 backdrop-blur-md text-white flex justify-between items-center p-6 shadow-md border-b border-cyan-400/20">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             {/* Water Drop Image */}
-            <div>
+            <div className="bg-white/10 p-2 rounded-lg border border-cyan-400/30">
               <img
                 src={waterDropImage}
-                alt="Water Drop"
-                className="w-10 h-10 object-contain rounded-md"
+                alt="Adplus Aqua Logo"
+                className="w-8 h-8 object-contain"
                 onError={(e) => {
                   e.target.style.display = "none";
                   e.target.nextSibling.style.display = "block";
                 }}
               />
               {/* Fallback emoji */}
-              <span className="text-2xl hidden">💧</span>
+              <span className="text-xl hidden">💧</span>
             </div>
             <div>
               <h2 className="text-xl font-bold">
                 Adplus<span className="text-cyan-300">.aqua</span>
               </h2>
-              <p className="text-xs text-blue-100">Custom Branded Water</p>
+              <p className="text-xs text-cyan-200">Custom Branded Water</p>
             </div>
           </div>
           <button
@@ -235,7 +233,7 @@ function Header() {
             Get Free Quote
           </a>
 
-          <p className="text-blue-100 text-sm mb-3 text-center font-medium">
+          <p className="text-cyan-200 text-sm mb-3 text-center font-medium">
             💧 Purity with Personalization
           </p>
 
@@ -262,8 +260,8 @@ function Header() {
 
           {/* Contact Info */}
           <div className="mt-4 text-center">
-            <p className="text-blue-100 text-xs">📞 +91 9458381868</p>
-            <p className="text-blue-100 text-xs">📧 adplus.aqua@gmail.com</p>
+            <p className="text-cyan-200 text-xs">📞 +91 9458381868</p>
+            <p className="text-cyan-200 text-xs">📧 adplus.aqua@gmail.com</p>
           </div>
         </div>
       </aside>
