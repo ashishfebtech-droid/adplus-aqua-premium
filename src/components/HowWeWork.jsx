@@ -162,7 +162,7 @@ function HowWeWork() {
                 Ready to Start Your Order?
               </h3>
               <p className="text-gray-600 mb-6">
-                Complete process takes 7-12 days. Minimum order 500 bottles.
+                complete process takes 3-5 days, get your customized bottle in your hand only in 3-5 days. Minimum order 500 bottles.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 flex items-center justify-center gap-2 shadow-md">

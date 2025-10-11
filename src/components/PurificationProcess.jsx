@@ -73,7 +73,7 @@ function PurificationProcess() {
     {
       icon: <FaAward />,
       name: "ISO Certified",
-      license: "Quality Management System",
+      license: "Certification No. UCSPL8024101629",
       color: "from-blue-500 to-cyan-600"
     }
   ];

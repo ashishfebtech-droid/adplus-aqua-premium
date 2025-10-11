@@ -42,7 +42,7 @@ function Hero() {
               {/* Certification Badges */}
               {/* Certification Badges with Images */}
               <div className="flex justify-center lg:justify-start gap-4 mb-6">
-                <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30 flex items-center gap-2">
+                <div className="bg-white/20 backdrop-blur-sm rounded-full border border-white/30 flex items-center gap-2">
                   <img
                     src="images/fssai_login.jpg"
                     alt="FSSAI Certified"
@@ -56,7 +56,7 @@ function Hero() {
                  
                 </div>
 
-                <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30 flex items-center gap-2">
+                <div className="bg-white/20 backdrop-blur-sm rounded-full border border-white/30 flex items-center gap-2">
                   <img
                     src="images/ISO.jpg"
                     alt="ISO Certified"
