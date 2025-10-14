@@ -13,7 +13,7 @@ function FoundersMessage() {
       color: "from-cyan-500 to-blue-600",
       icon: <FaHeart />,
       image:
-        "images/D.jpeg",
+        "images/dr.jpg",
     },
     {
       name: "Eng. Subhan Khan",
@@ -25,7 +25,7 @@ function FoundersMessage() {
       color: "from-blue-500 to-cyan-600",
       icon: <FaLightbulb />,
       image:
-        "images/En.jpeg",
+        "images/Eng.jpg",
     },
   ];
 
