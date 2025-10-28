@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     tailwindcss(), // ✅ Fast Tailwind build + auto optimization
   ],
-  base: '/adplus-aqua-premium/',
+  
   css: {
     devSourcemap: false, // ✅ disables heavy CSS source maps for faster reloads
   },
