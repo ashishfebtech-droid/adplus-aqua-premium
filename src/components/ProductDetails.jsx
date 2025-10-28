@@ -9,8 +9,8 @@ import {
 
 function ProductDetails() {
   const bottleImages = {
-    small: "images/066.png", // 250ml bottle image
-    large: "images/07.png", // 1 Litre bottle image
+    small: "images/250gm.webp", // 250ml bottle image
+    large: "images/1litre.webp", // 1 Litre bottle image
   };
   const bottleSizes = [
     {
