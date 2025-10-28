@@ -9,8 +9,8 @@ import {
 
 function ProductDetails() {
   const bottleImages = {
-    small: "images/milk-bottle_7551913.png", // 250ml bottle image
-    large: "images/juice_18167587.png", // 1 Litre bottle image
+    small: "images/066.png", // 250ml bottle image
+    large: "images/07.png", // 1 Litre bottle image
   };
   const bottleSizes = [
     {
@@ -94,7 +94,7 @@ function ProductDetails() {
                   <img
                     src={bottle.image}
                     alt={bottle.title}
-                    className="w-24 h-32 object-contain mb-4 mx-auto"
+                    className="w-32 h-32 object-contain mb-4 mx-auto"
                   />
                   <div
                     className={`inline-block bg-gradient-to-r ${bottle.color} px-6 py-2 rounded-full mb-4 shadow-md`}

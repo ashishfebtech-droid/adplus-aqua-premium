@@ -72,25 +72,75 @@ function Portfolio() {
   // Sample client work images
   const portfolioImages = [
     {
-      url: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
+      url: "images/1.jpg",
       title: "Luxury Hotel Collection",
       category: "Hotels"
     },
     {
-      url: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80",
+      url: "images/2.jpg",
       title: "Wedding Special Edition",
       category: "Weddings"
     },
     {
-      url: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80",
+      url: "images/3.jpg",
       title: "Corporate Branding",
       category: "Corporate"
     },
     {
-      url: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80",
+      url: "images/4.jpg",
       title: "Event Series",
       category: "Events"
-    }
+    },
+    {
+      url: "images/5.jpg",
+      title: "Event Series",
+      category: "Events"
+    },
+    {
+      url: "images/6.jpg",
+      title: "Event Series",
+      category: "Events"
+    },
+    {
+      url: "images/7.jpg",
+      title: "Event Series",
+      category: "Events"
+    },
+    {
+      url: "images/8.jpg",
+      title: "Event Series",
+      category: "Events"
+    },
+    {
+      url: "images/9.jpg",
+      title: "Event Series",
+      category: "Events"
+    },
+    {
+      url: "images/10.jpg",
+      title: "Event Series",
+      category: "Events"
+    },
+    {
+      url: "images/11.jpg",
+      title: "Event Series",
+      category: "Events"
+    },
+    {
+      url: "images/12.jpg",
+      title: "Event Series",
+      category: "Events"
+    },
+    {
+      url: "images/13.jpg",
+      title: "Event Series",
+      category: "Events"
+    },
+    {
+      url: "images/14.jpg",
+      title: "Event Series",
+      category: "Events"
+    },
   ];
 
   // Auto rotate testimonials
@@ -162,7 +212,7 @@ function Portfolio() {
                   <img 
                     src={item.url} 
                     alt={item.title}
-                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                     <span className="text-cyan-300 text-xs font-semibold mb-1">{item.category}</span>

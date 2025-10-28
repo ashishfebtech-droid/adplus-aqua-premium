@@ -6,10 +6,10 @@ function Hero() {
 
   // Custom branded bottles images
   const bottleImages = [
-    'images/AQUA1.jpg',
-    'images/AQUA2.jpg',
-    'images/AQUA3.jpg',
-    'images/AQUA3.jpg'
+    'images/14.jpg',
+    'images/2.jpg',
+    'images/3.jpg',
+    'images/4.jpg'
   ];
 
   // Bottle carousel navigation
@@ -22,7 +22,7 @@ function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-start sm:items-center justify-center pt-20 sm:pt-0 bg-white">
+    <section id="home" className="relative min-h-screen flex items-start sm:items-center justify-center pt-20 sm:pt-24 bg-white">
       {/* Content - Pure White Background */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-end">
@@ -114,55 +114,55 @@ function Hero() {
 
           {/* Right Side - Bottle Carousel */}
           <div className="relative">
-            <div className="bg-white rounded-3xl p-6 border border-gray-200 shadow-lg">
-              <h3 className="text-gray-800 text-xl font-bold text-center mb-6">Our Custom Bottles</h3>
+            <div className="bg-white rounded-3xl border border-gray-200 shadow-lg overflow-hidden">
+              <h3 className="text-gray-800 text-xl font-bold text-center mb-4 pt-6">Our Custom Bottles</h3>
 
-              {/* Main Bottle Image */}
-              <div className="relative h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden mb-4 bg-gray-100">
+              {/* Main Bottle Image - Full width no padding */}
+              <div className="relative h-96 sm:h-96 md:h-[500px] lg:h-[500px] overflow-hidden bg-gray-100 flex items-center justify-center">
                 <img
                   src={bottleImages[currentBottle]}
                   alt={`Custom bottle design ${currentBottle + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
                 />
 
                 {/* Navigation Arrows */}
                 <button
                   onClick={prevBottle}
-                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800/80 hover:bg-gray-900 text-white p-2 rounded-full transition-all duration-300"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800/80 hover:bg-gray-900 text-white p-3 rounded-full transition-all duration-300 z-20"
                 >
-                  <FaChevronLeft />
+                  <FaChevronLeft size={20} />
                 </button>
                 <button
                   onClick={nextBottle}
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800/80 hover:bg-gray-900 text-white p-2 rounded-full transition-all duration-300"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800/80 hover:bg-gray-900 text-white p-3 rounded-full transition-all duration-300 z-20"
                 >
-                  <FaChevronRight />
+                  <FaChevronRight size={20} />
                 </button>
               </div>
 
               {/* Bottle Thumbnails */}
-              <div className="grid grid-cols-4 gap-2">
+              <div className="grid grid-cols-4 gap-3 p-6">
                 {bottleImages.map((image, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentBottle(index)}
-                    className={`relative h-16 rounded-lg overflow-hidden transition-all duration-300 bg-gray-100 ${index === currentBottle
-                        ? 'ring-2 ring-cyan-500 transform scale-105'
-                        : 'opacity-70 hover:opacity-100'
+                    className={`relative h-20 rounded-lg overflow-hidden transition-all duration-300 bg-gray-100 flex items-center justify-center ${index === currentBottle
+                        ? 'ring-3 ring-cyan-500 transform scale-105'
+                        : 'opacity-60 hover:opacity-100'
                       }`}
                   >
                     <img
                       src={image}
                       alt={`Thumbnail ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </button>
                 ))}
               </div>
 
               {/* Bottle Indicator */}
-              <div className="flex justify-center mt-4">
-                <span className="text-gray-700 text-sm bg-gray-200 px-3 py-1 rounded-full">
+              <div className="flex justify-center pb-6">
+                <span className="text-gray-700 text-sm bg-gray-200 px-4 py-2 rounded-full font-medium">
                   {currentBottle + 1} / {bottleImages.length}
                 </span>
               </div>
