@@ -1,5 +1,3 @@
-
-
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import WhoWeAre from "./components/WhoWeAre";
@@ -7,11 +5,14 @@ import Portfolio from "./components/Portfolio";
 import HowWeWork from "./components/HowWeWork";
 import ProductDetails from "./components/ProductDetails";
 import FoundersMessage from "./components/FoundersMessage";
-import PurificationProcess from "./components/PurificationProcess"; 
+import PurificationProcess from "./components/PurificationProcess";
 import ContactUs from "./components/ContactUs";
-import Footer from "./components/Footer"; 
+import Footer from "./components/Footer";
+import { useLenis } from "./hooks/useLenis";
+import "lenis/dist/lenis.css";
 
 function App() {
+  useLenis();
   return (
     <div>
       <Header />
@@ -24,7 +25,6 @@ function App() {
       <PurificationProcess />
       <ContactUs />
       <Footer />
-
     </div>
   );
 }
