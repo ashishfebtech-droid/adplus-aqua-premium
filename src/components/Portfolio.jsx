@@ -144,7 +144,22 @@ function Portfolio() {
       title: "Event Series",
       category: "Events",
     },
+     {
+      url: "images/15.jpg",
+      title: "Luxury Hotel Collection",
+      category: "Hotels",
+    },
     {
+      url: "images/16.jpg",
+      title: "Wedding Special Edition",
+      category: "Weddings",
+    },
+     {
+      url: "images/17.jpg",
+      title: "Luxury Hotel Collection",
+      category: "Hotels",
+    },
+     {
       url: "images/14.jpg",
       title: "Event Series",
       category: "Events",
